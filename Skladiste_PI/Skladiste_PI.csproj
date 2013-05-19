@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57F1ECC5-254F-4C0E-8BAB-F6F1B2721211}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Skladiste_PI</RootNamespace>
+    <AssemblyName>Skladiste_PI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.Designer.cs">
+      <DependentUpon>frmPregledPrijemnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Unos\frmUnosPrijemnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Unos\frmUnosPrijemnice.Designer.cs">
+      <DependentUpon>frmUnosPrijemnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.Designer.cs">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledKupaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledKupaca.Designer.cs">
+      <DependentUpon>frmPregledKupaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.Designer.cs">
+      <DependentUpon>frmUnosZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosKupaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosKupaca.Designer.cs">
+      <DependentUpon>frmUnosKupaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.Designer.cs">
+      <DependentUpon>frmGeneriraneNarudzbenice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\frmGlavna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\frmGlavna.Designer.cs">
+      <DependentUpon>frmGlavna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmPregledArtikla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmPregledArtikla.Designer.cs">
+      <DependentUpon>frmPregledArtikla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.Designer.cs">
+      <DependentUpon>frmPregledDobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.Designer.cs">
+      <DependentUpon>frmPregledOtpremince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmUnosArtikla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmUnosArtikla.Designer.cs">
+      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.Designer.cs">
+      <DependentUpon>frmUnosDobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.Designer.cs">
+      <DependentUpon>frmUnosOtpremnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.resx">
+      <DependentUpon>frmPregledPrijemnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosPrijemnice.resx">
+      <DependentUpon>frmUnosPrijemnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.resx">
+      <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledKupaca.resx">
+      <DependentUpon>frmPregledKupaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.resx">
+      <DependentUpon>frmUnosZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosKupaca.resx">
+      <DependentUpon>frmUnosKupaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.resx">
+      <DependentUpon>frmGeneriraneNarudzbenice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\frmGlavna.resx">
+      <DependentUpon>frmGlavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Artikli\frmPregledArtikla.resx">
+      <DependentUpon>frmPregledArtikla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.resx">
+      <DependentUpon>frmPregledDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.resx">
+      <DependentUpon>frmPregledOtpremince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Artikli\frmUnosArtikla.resx">
+      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.resx">
+      <DependentUpon>frmUnosDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.resx">
+      <DependentUpon>frmUnosOtpremnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
