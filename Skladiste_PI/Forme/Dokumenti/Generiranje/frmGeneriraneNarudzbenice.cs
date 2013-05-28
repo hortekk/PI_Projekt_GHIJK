@@ -17,9 +17,12 @@ namespace Skladiste_PI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnZatvori_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+
+
     }
 }

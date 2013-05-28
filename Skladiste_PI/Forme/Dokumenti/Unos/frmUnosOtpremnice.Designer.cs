@@ -36,6 +36,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnUnesiOtpremincu = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.lblDobavljac.AutoSize = true;
             this.lblDobavljac.Location = new System.Drawing.Point(66, 56);
             this.lblDobavljac.Name = "lblDobavljac";
-            this.lblDobavljac.Size = new System.Drawing.Size(55, 13);
+            this.lblDobavljac.Size = new System.Drawing.Size(54, 13);
             this.lblDobavljac.TabIndex = 1;
             this.lblDobavljac.Text = "Dobavljac";
             // 
@@ -62,7 +63,7 @@
             this.lblZaposlenik.AutoSize = true;
             this.lblZaposlenik.Location = new System.Drawing.Point(66, 84);
             this.lblZaposlenik.Name = "lblZaposlenik";
-            this.lblZaposlenik.Size = new System.Drawing.Size(59, 13);
+            this.lblZaposlenik.Size = new System.Drawing.Size(57, 13);
             this.lblZaposlenik.TabIndex = 2;
             this.lblZaposlenik.Text = "Zaposlenik";
             // 
@@ -70,14 +71,14 @@
             // 
             this.txtZaposlenik.Location = new System.Drawing.Point(159, 84);
             this.txtZaposlenik.Name = "txtZaposlenik";
-            this.txtZaposlenik.Size = new System.Drawing.Size(200, 20);
+            this.txtZaposlenik.Size = new System.Drawing.Size(200, 21);
             this.txtZaposlenik.TabIndex = 4;
             // 
             // txtDobavljac
             // 
             this.txtDobavljac.Location = new System.Drawing.Point(159, 56);
             this.txtDobavljac.Name = "txtDobavljac";
-            this.txtDobavljac.Size = new System.Drawing.Size(200, 20);
+            this.txtDobavljac.Size = new System.Drawing.Size(200, 21);
             this.txtDobavljac.TabIndex = 5;
             // 
             // dataGridView1
@@ -93,7 +94,8 @@
             // 
             // btnUnesiOtpremincu
             // 
-            this.btnUnesiOtpremincu.Location = new System.Drawing.Point(229, 320);
+            this.btnUnesiOtpremincu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUnesiOtpremincu.Location = new System.Drawing.Point(438, 373);
             this.btnUnesiOtpremincu.Name = "btnUnesiOtpremincu";
             this.btnUnesiOtpremincu.Size = new System.Drawing.Size(75, 23);
             this.btnUnesiOtpremincu.TabIndex = 7;
@@ -104,14 +106,28 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(159, 30);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 8;
+            // 
+            // btnZatvori
+            // 
+            this.btnZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnZatvori.Location = new System.Drawing.Point(519, 373);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(75, 23);
+            this.btnZatvori.TabIndex = 9;
+            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // frmUnosOtpremnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnZatvori;
             this.ClientSize = new System.Drawing.Size(606, 408);
+            this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnUnesiOtpremincu);
             this.Controls.Add(this.dataGridView1);
@@ -120,6 +136,8 @@
             this.Controls.Add(this.lblZaposlenik);
             this.Controls.Add(this.lblDobavljac);
             this.Controls.Add(this.lblDatum);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmUnosOtpremnice";
             this.Text = "Unos Otpremnice";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -138,5 +156,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnUnesiOtpremincu;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnZatvori;
     }
 }

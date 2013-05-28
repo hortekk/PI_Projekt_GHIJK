@@ -31,9 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Skladiste.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forme\Administracija\frmPostavke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Administracija\frmPostavke.Designer.cs">
+      <DependentUpon>frmPostavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Administracija\frmSkladiste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Administracija\frmSkladiste.Designer.cs">
+      <DependentUpon>frmSkladiste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,28 +74,28 @@
     <Compile Include="Forme\Dokumenti\Unos\frmUnosPrijemnice.Designer.cs">
       <DependentUpon>frmUnosPrijemnice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.Designer.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledZaposlenika.Designer.cs">
       <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledKupaca.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledKupaca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledKupaca.Designer.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledKupaca.Designer.cs">
       <DependentUpon>frmPregledKupaca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.Designer.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosZaposlenika.Designer.cs">
       <DependentUpon>frmUnosZaposlenika.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosKupaca.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosKupaca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosKupaca.Designer.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosKupaca.Designer.cs">
       <DependentUpon>frmUnosKupaca.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.cs">
@@ -85,6 +103,12 @@
     </Compile>
     <Compile Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.Designer.cs">
       <DependentUpon>frmGeneriraneNarudzbenice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\frmIspis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\frmIspis.Designer.cs">
+      <DependentUpon>frmIspis.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -104,10 +128,10 @@
     <Compile Include="Forme\Artikli\frmPregledArtikla.Designer.cs">
       <DependentUpon>frmPregledArtikla.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledDobavljaca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.Designer.cs">
+    <Compile Include="Forme\Administracija\Pregled\frmPregledDobavljaca.Designer.cs">
       <DependentUpon>frmPregledDobavljaca.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.cs">
@@ -122,10 +146,10 @@
     <Compile Include="Forme\Artikli\frmUnosArtikla.Designer.cs">
       <DependentUpon>frmUnosArtikla.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosDobavljaca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.Designer.cs">
+    <Compile Include="Forme\Administracija\Unos\frmUnosDobavljaca.Designer.cs">
       <DependentUpon>frmUnosDobavljaca.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.cs">
@@ -136,26 +160,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\Administracija\frmPostavke.resx">
+      <DependentUpon>frmPostavke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Administracija\frmSkladiste.resx">
+      <DependentUpon>frmSkladiste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.resx">
       <DependentUpon>frmPregledPrijemnice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosPrijemnice.resx">
       <DependentUpon>frmUnosPrijemnice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledZaposlenika.resx">
+    <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledZaposlenika.resx">
       <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledKupaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledKupaca.resx">
       <DependentUpon>frmPregledKupaca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosZaposlenika.resx">
+    <EmbeddedResource Include="Forme\Administracija\Unos\frmUnosZaposlenika.resx">
       <DependentUpon>frmUnosZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosKupaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Unos\frmUnosKupaca.resx">
       <DependentUpon>frmUnosKupaca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.resx">
       <DependentUpon>frmGeneriraneNarudzbenice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\frmIspis.resx">
+      <DependentUpon>frmIspis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
@@ -166,7 +199,7 @@
     <EmbeddedResource Include="Forme\Artikli\frmPregledArtikla.resx">
       <DependentUpon>frmPregledArtikla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Pregled\frmPregledDobavljaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledDobavljaca.resx">
       <DependentUpon>frmPregledDobavljaca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.resx">
@@ -175,7 +208,7 @@
     <EmbeddedResource Include="Forme\Artikli\frmUnosArtikla.resx">
       <DependentUpon>frmUnosArtikla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Upravljanje\Unos\frmUnosDobavljaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Unos\frmUnosDobavljaca.resx">
       <DependentUpon>frmUnosDobavljaca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.resx">
@@ -205,7 +238,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\odjava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\korisnik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skladiste.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

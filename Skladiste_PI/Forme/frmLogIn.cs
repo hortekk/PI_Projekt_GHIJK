@@ -12,24 +12,32 @@ namespace Skladiste_PI
 {
     public partial class frmLogIn : Form
     {
-        public Boolean logiranKorisnik = false;
+        private byte logiranKorisnik = 0;
+        private frmGlavna mainForm = null;
 
-        public frmLogIn()
+
+        public frmLogIn(frmGlavna callingForm)
         {
+            mainForm = callingForm as frmGlavna; 
             InitializeComponent();
 
         }
+
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
 
             logiranKorisnik = ProvjeriKorisnika(txtKorIme.Text, txtLozinka.Text);
 
-            if (logiranKorisnik){
-                // Provjera uspjesna
-                MessageBox.Show("Uspješno ste se prijavili!", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-               // frmGlavna.UspjesnaPrijava();
+            if (logiranKorisnik==1){
+                // Provjera uspjesna - logiran korisnik
+                this.mainForm.PostaviStatusTekst("Korisnik: " + txtKorIme.Text + ", prijavljen " + DateTime.Now.ToString(), 1);
+                this.Close();
+            }
+            else if (logiranKorisnik==2)
+            {
+                // Provjera uspjesna - logiran admin
+                this.mainForm.PostaviStatusTekst("Administrator: " + txtKorIme.Text + ", prijavljen " + DateTime.Now.ToString(), 2);
                 this.Close();
             }
             else
@@ -41,14 +49,27 @@ namespace Skladiste_PI
             }
         }
 
-        private Boolean ProvjeriKorisnika(string kIme, string lozinka)
+        /// <summary>
+        /// Provjera unesenih podataka za logiranje.
+        /// </summary>
+        /// <param name="kIme">Korisnicko ime</param>
+        /// <param name="lozinka">Lozinka</param>
+        /// <returns>0-nije logiran,1-logiran korisnik,2-logiran admin</returns>
+        private byte ProvjeriKorisnika(string kIme, string lozinka)
         {
-            Boolean logiran = false;
+            byte logiran = 0;
 
+
+            // Dohvati podatke
+            
             // Proba
-            if (kIme == "ž" && lozinka == "ž")
+            if (lozinka == "ž")  //kIme == "ž" && 
             {
-                logiran = true;
+                logiran = 1;
+            }
+            else if (lozinka == "admin")
+            {
+                logiran = 2;
             }
 
             return logiran;
@@ -62,7 +83,7 @@ namespace Skladiste_PI
 
         private void frmLogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!logiranKorisnik)
+            if (logiranKorisnik == 0)
             {
                 Application.Exit();
             }
@@ -71,12 +92,13 @@ namespace Skladiste_PI
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-            logiranKorisnik = false;
+            logiranKorisnik = 0;
+            this.mainForm.PostaviStatusTekst("Inicijalizacija...",0);
 
 
             // Proba
             txtKorIme.Text = "ž";
-            txtLozinka.Text = "ž";
+            txtLozinka.Text = "admin";
 
         }
     }

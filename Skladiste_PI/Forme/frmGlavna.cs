@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Skladiste_PI
 {
+
+
+
     public partial class frmGlavna : Form
     {
         public frmGlavna()
@@ -21,143 +24,239 @@ namespace Skladiste_PI
         {
             novoLogiranje();
         }
-
+        /// <summary>
+        /// Poziv forme za login.
+        /// </summary>
         private void novoLogiranje()
         {
-            
-            frmLogIn frmLogIn =  new frmLogIn();
-            //frmLogIn.MdiParent = this;
+            mnuProzoriZatvoriSve_Click(null, null);
+            frmLogIn frmLogIn =  new frmLogIn(this);
             frmLogIn.ShowDialog();
-
         }
-        public void UspjesnaPrijava()
+        /// <summary>
+        /// Funkcija dozvoljava dodatne funkcionalnosti ako se logira admin.
+        /// </summary>
+        /// <param name="istina">True ako je admin logiran, false ako nije.</param>
+        private void logiranAdmin(bool istina)
         {
-            mnuMeni.Enabled = true;
-            
-            //logiranKorisnik = false;
+            this.mnuAdministracijaPostavke.Visible = istina;
+            this.mnuAdministracijaSep1.Visible = istina;
+            //....
 
         }
 
-        private void zatvoriToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Postavlja status/tekst na glavnoj formi.
+        /// </summary>
+        /// <param name="tekst">Tekst za ispis.</param>
+        /// <param name="slika">0-pricekaj,1-logiran,2-logiranAdmin</param>
+        public void PostaviStatusTekst(string tekst, byte slika)
         {
-            Application.Exit();
+            logiranAdmin(false);
+            switch (slika){
+                case 0: // pricekaj
+                    this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.refresh;
+                    break;
+                case 1: // logiran korisnik
+                    this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.korisnik;
+                    break;
+                case 2: // logiran admin
+                    this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.admin;
+                    logiranAdmin(true);
+                    break;
+
+            }
+            this.stStripStatusLabel.Text = tekst;
+
         }
 
-        private void primkToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDatotekaZatvoriApp_Click(object sender, EventArgs e)
         {
-            frmPregledPrijemnice frmPregledPrijemnice = new frmPregledPrijemnice();
-            frmPregledPrijemnice.MdiParent = this;
-            frmPregledPrijemnice.Show();
+            try
+            {
+                mnuProzoriZatvoriSve_Click(null, null);
+                Application.Exit();
+            }
+            catch (Exception)
+            {
+                Application.Exit();
+            }
+        }
+        /// <summary>
+        /// Pokretanje child formi.
+        /// </summary>
+        /// <param name="forma">Naziv forme za pokrenuti.</param>
+        private void pokreniFormu(Form forma){
+            forma.MdiParent = this;
+            forma.Show();
         }
 
-        private void noviKupacToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDatotekaIspis_Click(object sender, EventArgs e)
         {
-            frmUnosKupaca frmUnosKupaca = new frmUnosKupaca();
-            frmUnosKupaca.MdiParent = this;
-            frmUnosKupaca.Show();
-
+            pokreniFormu(new frmIspis());
         }
 
-        private void otpremniciToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDokumentiPregledPrijemnica_Click(object sender, EventArgs e)
         {
-            frmPregledOtpremince frmPregledOtpremnice = new frmPregledOtpremince();
-            frmPregledOtpremnice.MdiParent = this;
-            frmPregledOtpremnice.Show();
-         
+            pokreniFormu(new frmPregledPrijemnice());
         }
 
-        private void narudžbeniceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuAdministracijaKupciUnos_Click(object sender, EventArgs e)
         {
-            frmGeneriraneNarudzbenice frmGeneriraneNarudzbenice = new frmGeneriraneNarudzbenice();
-            frmGeneriraneNarudzbenice.MdiParent = this;
-            frmGeneriraneNarudzbenice.Show();
-
+            pokreniFormu(new frmUnosKupaca());
         }
 
-        private void noviToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDokumentiPregledOtpremnica_Click(object sender, EventArgs e)
         {
-            frmUnosDobavljaca frmUnosDobavljaca = new frmUnosDobavljaca();
-            frmUnosDobavljaca.MdiParent = this;
-            frmUnosDobavljaca.Show();
-
+            pokreniFormu(new frmPregledOtpremince());
         }
 
-        private void unosNovogToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDokumentiGeneriranjeNarudzbenice_Click(object sender, EventArgs e)
         {
-            frmUnosArtikla frmUnosArtikla = new frmUnosArtikla();
-            frmUnosArtikla.MdiParent = this;
-            frmUnosArtikla.Show();
-
+            pokreniFormu(new frmGeneriraneNarudzbenice());
         }
 
-        private void pregledToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void mnuAdministracijaDobavljaciUnos_Click(object sender, EventArgs e)
         {
-            frmPregledArtikla frmPregledArtikla = new frmPregledArtikla();
-            frmPregledArtikla.MdiParent = this;
-            frmPregledArtikla.Show();
-
+            pokreniFormu(new frmUnosDobavljaca());
         }
 
-        private void pregledToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void mnuArtikliUnos_Click(object sender, EventArgs e)
         {
-            frmPregledKupaca frmPregledKupaca = new frmPregledKupaca();
-            frmPregledKupaca.MdiParent = this;
-            frmPregledKupaca.Show();
-
+            pokreniFormu(new frmUnosArtikla());
         }
 
-        private void pregledToolStripMenuItem3_Click(object sender, EventArgs e)
+        private void mnuArtikliPregled_Click(object sender, EventArgs e)
         {
-            frmPregledDobavljaca frmPregledDobavljaca = new frmPregledDobavljaca();
-            frmPregledDobavljaca.MdiParent = this;
-            frmPregledDobavljaca.Show();
+            pokreniFormu(new frmPregledArtikla());
         }
 
-        private void noviToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void mnuAdministracijaKupciPregled_Click(object sender, EventArgs e)
         {
-            frmUnosZaposlenika frmUnosZaposlenika = new frmUnosZaposlenika();
-            frmUnosZaposlenika.MdiParent = this;
-            frmUnosZaposlenika.Show();
-
+            pokreniFormu(new frmPregledKupaca());
         }
 
-        private void pregledToolStripMenuItem4_Click(object sender, EventArgs e)
+        private void mnuAdministracijaDobavljaciPregled_Click(object sender, EventArgs e)
         {
-            frmPregledZaposlenika frmPregledZaposlenika = new frmPregledZaposlenika();
-            frmPregledZaposlenika.MdiParent = this;
-            frmPregledZaposlenika.Show();
-
+            pokreniFormu(new frmPregledDobavljaca());
         }
 
-        private void primkeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuAdministracijaZaposleniciUnos_Click(object sender, EventArgs e)
         {
-            frmUnosPrijemnice frmUnosPrijemnice = new frmUnosPrijemnice();
-            frmUnosPrijemnice.MdiParent = this;
-            frmUnosPrijemnice.Show();
+            pokreniFormu(new frmUnosZaposlenika());
         }
 
-        private void odjaviSeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuAdministracijaZaposleniciPregled_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmPregledZaposlenika());
+        }
+
+        private void mnuDokumentiUnosPrijemnica_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmUnosPrijemnice());
+        }
+
+        private void mnuDatotekaOdjava_Click(object sender, EventArgs e)
         {
             // Odjava
+            // LogOut - evidencija
+
             novoLogiranje();
         }
-
-        private void otpremniceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuAdministracijaSkladiste_Click(object sender, EventArgs e)
         {
-            frmUnosOtpremnice frmUnosOtpremnice = new frmUnosOtpremnice();
-            frmUnosOtpremnice.MdiParent = this;
-            frmUnosOtpremnice.Show();
-
+            pokreniFormu(new frmSkladiste());
         }
 
-        private void oNamaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuDokumentiUnosOtpremnica_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmUnosOtpremnice());
+        }
+
+        private void mnuPomocONama_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tim PI! GHIJK", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void dokumentacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuPomocDokumentacija_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Uskoro...", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+        // Slaganje prozora
+        private void mnuProzoriPoslaziVodopadno_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void mnuProzoriPrikaziVertikalno_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void mnuProzoriPrikaziHorizontalno_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void mnuProzoriZatvoriSve_Click(object sender, EventArgs e)
+        {
+            foreach (Form ChildForm in this.MdiChildren){
+	            ChildForm.Dispose();
+	        }
+        }
+
+        private void postaviProzore(FormWindowState stanje)
+        {
+            foreach (Form ChildForm in this.MdiChildren)
+            {
+                ChildForm.WindowState = stanje;
+            }
+        }
+
+        private void mnuProzoriMinimizirajSve_Click(object sender, EventArgs e)
+        {
+            postaviProzore(FormWindowState.Minimized);
+        }
+
+        private void mnuProzoriPovecajSve_Click(object sender, EventArgs e)
+        {
+            postaviProzore(FormWindowState.Maximized);
+        }
+
+        private void mnuProzoriVratiSve_Click(object sender, EventArgs e)
+        {
+            postaviProzore(FormWindowState.Normal);
+        }
+
+        private void mnuAdministracijaPostavke_Click(object sender, EventArgs e)
+        {
+            // Samo admin promjene vezane za aplikaciju
+            pokreniFormu(new frmPostavke());
+        }
+
+
+        // 1-Zbog renderiranja pozadine
+        private void frmGlavna_ResizeEnd(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
+        // 2-Zbog renderiranja pozadine
+        FormWindowState LastWindowState = FormWindowState.Maximized;
+        private void frmGlavna_Resize(object sender, EventArgs e)
+        {
+            if (WindowState != LastWindowState)
+            {
+                LastWindowState = WindowState;
+                this.Refresh();
+            }
+        }
+
+        private void frmGlavna_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mnuProzoriZatvoriSve_Click(null,null);
+        }
+
     }
 }

@@ -35,11 +35,13 @@
             this.txtLozinka = new System.Windows.Forms.TextBox();
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.lblNaslov = new System.Windows.Forms.Label();
+            this.pbSlika = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPrijava
             // 
-            this.btnPrijava.Location = new System.Drawing.Point(172, 156);
+            this.btnPrijava.Location = new System.Drawing.Point(288, 171);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(100, 23);
             this.btnPrijava.TabIndex = 2;
@@ -50,7 +52,7 @@
             // lblKorisnickoIme
             // 
             this.lblKorisnickoIme.AutoSize = true;
-            this.lblKorisnickoIme.Location = new System.Drawing.Point(154, 69);
+            this.lblKorisnickoIme.Location = new System.Drawing.Point(271, 75);
             this.lblKorisnickoIme.Name = "lblKorisnickoIme";
             this.lblKorisnickoIme.Size = new System.Drawing.Size(73, 13);
             this.lblKorisnickoIme.TabIndex = 1;
@@ -59,7 +61,7 @@
             // lblLozinka
             // 
             this.lblLozinka.AutoSize = true;
-            this.lblLozinka.Location = new System.Drawing.Point(154, 98);
+            this.lblLozinka.Location = new System.Drawing.Point(271, 104);
             this.lblLozinka.Name = "lblLozinka";
             this.lblLozinka.Size = new System.Drawing.Size(42, 13);
             this.lblLozinka.TabIndex = 2;
@@ -67,14 +69,14 @@
             // 
             // txtKorIme
             // 
-            this.txtKorIme.Location = new System.Drawing.Point(239, 66);
+            this.txtKorIme.Location = new System.Drawing.Point(356, 72);
             this.txtKorIme.Name = "txtKorIme";
             this.txtKorIme.Size = new System.Drawing.Size(100, 21);
             this.txtKorIme.TabIndex = 0;
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(239, 98);
+            this.txtLozinka.Location = new System.Drawing.Point(356, 104);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(100, 21);
             this.txtLozinka.TabIndex = 1;
@@ -82,7 +84,7 @@
             // btnIzlaz
             // 
             this.btnIzlaz.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIzlaz.Location = new System.Drawing.Point(278, 156);
+            this.btnIzlaz.Location = new System.Drawing.Point(394, 171);
             this.btnIzlaz.Name = "btnIzlaz";
             this.btnIzlaz.Size = new System.Drawing.Size(100, 23);
             this.btnIzlaz.TabIndex = 3;
@@ -93,11 +95,23 @@
             // lblNaslov
             // 
             this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Location = new System.Drawing.Point(72, 20);
+            this.lblNaslov.Location = new System.Drawing.Point(257, 23);
             this.lblNaslov.Name = "lblNaslov";
             this.lblNaslov.Size = new System.Drawing.Size(189, 13);
             this.lblNaslov.TabIndex = 1;
             this.lblNaslov.Text = "Molimo unesite korisničko ime i lozinku!";
+            // 
+            // pbSlika
+            // 
+            this.pbSlika.BackgroundImage = global::Skladiste_PI.Properties.Resources.login_back;
+            this.pbSlika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSlika.ErrorImage = null;
+            this.pbSlika.InitialImage = null;
+            this.pbSlika.Location = new System.Drawing.Point(12, 12);
+            this.pbSlika.Name = "pbSlika";
+            this.pbSlika.Size = new System.Drawing.Size(224, 195);
+            this.pbSlika.TabIndex = 4;
+            this.pbSlika.TabStop = false;
             // 
             // frmLogIn
             // 
@@ -106,6 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIzlaz;
             this.ClientSize = new System.Drawing.Size(528, 255);
+            this.Controls.Add(this.pbSlika);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorIme);
             this.Controls.Add(this.lblLozinka);
@@ -125,6 +140,7 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogIn_FormClosing);
             this.Load += new System.EventHandler(this.frmLogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +155,6 @@
         private System.Windows.Forms.TextBox txtLozinka;
         private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.Label lblNaslov;
+        private System.Windows.Forms.PictureBox pbSlika;
     }
 }

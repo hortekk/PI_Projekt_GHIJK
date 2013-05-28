@@ -37,6 +37,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUnesi
@@ -112,11 +113,25 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 8;
             // 
+            // btnZatvori
+            // 
+            this.btnZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnZatvori.Location = new System.Drawing.Point(497, 327);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(75, 23);
+            this.btnZatvori.TabIndex = 9;
+            this.btnZatvori.Text = "&Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            // 
             // frmUnosArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 280);
+            this.CancelButton = this.btnZatvori;
+            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -126,8 +141,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUnesi);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmUnosArtikla";
-            this.Text = "Unos Novog Artikla";
+            this.Text = "Unos artikla";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +160,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnZatvori;
     }
 }

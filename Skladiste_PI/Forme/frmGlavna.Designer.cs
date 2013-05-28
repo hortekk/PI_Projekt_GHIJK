@@ -28,293 +28,516 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGlavna));
             this.mnuMeni = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odjaviSeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zatvoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dokumentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.primkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otpremniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.primkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otpremniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generiraniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.narudžbeniceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.artikliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unosNovogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.upravljanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kupciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noviKupacToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dobavljačiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noviToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oNamaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dokumentacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuDatoteka = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDatotekaIspis = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDatotekaSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuDatotekaOdjava = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDatotekaSep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuDatotekaZatvoriApp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumenti = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiUnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiUnosPrijemnica = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiUnosOtpremnica = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiPregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiPregledPrijemnica = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiPregledOtpremnica = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiGeneriranje = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDokumentiGeneriranjeNarudzbenice = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuArtikli = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuArtikliUnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuArtikliPregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracija = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaKupci = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaKupciUnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaKupciPregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaDobavljaci = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaDobavljaciUnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaDobavljaciPregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaZaposlenici = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaZaposleniciUnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaZaposleniciPregled = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaSkladiste = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAdministracijaSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuAdministracijaPostavke = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzori = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriPoslaziVodopadno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriPrikaziVertikalno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriPrikaziHorizontalno = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuProzoriMinimizirajSve = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriVratiSve = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriPovecajSve = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProzoriSep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuProzoriZatvoriSve = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPomoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPomocDokumentacija = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPomocSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuPomocONama = new System.Windows.Forms.ToolStripMenuItem();
+            this.stStrip = new System.Windows.Forms.StatusStrip();
+            this.stStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolOdjava = new System.Windows.Forms.ToolStripButton();
             this.mnuMeni.SuspendLayout();
+            this.stStrip.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMeni
             // 
             this.mnuMeni.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.dokumentiToolStripMenuItem,
-            this.artikliToolStripMenuItem,
-            this.upravljanjeToolStripMenuItem,
-            this.pomoćToolStripMenuItem});
+            this.mnuDatoteka,
+            this.mnuDokumenti,
+            this.mnuArtikli,
+            this.mnuAdministracija,
+            this.mnuProzori,
+            this.mnuPomoc});
             this.mnuMeni.Location = new System.Drawing.Point(0, 0);
             this.mnuMeni.Name = "mnuMeni";
-            this.mnuMeni.Size = new System.Drawing.Size(891, 24);
+            this.mnuMeni.Size = new System.Drawing.Size(784, 24);
             this.mnuMeni.TabIndex = 1;
             // 
-            // fileToolStripMenuItem
+            // mnuDatoteka
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.odjaviSeToolStripMenuItem,
-            this.zatvoriToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.fileToolStripMenuItem.Text = "&Datoteka";
+            this.mnuDatoteka.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDatotekaIspis,
+            this.mnuDatotekaSep1,
+            this.mnuDatotekaOdjava,
+            this.mnuDatotekaSep2,
+            this.mnuDatotekaZatvoriApp});
+            this.mnuDatoteka.Name = "mnuDatoteka";
+            this.mnuDatoteka.Size = new System.Drawing.Size(66, 20);
+            this.mnuDatoteka.Text = "&Datoteka";
             // 
-            // odjaviSeToolStripMenuItem
+            // mnuDatotekaIspis
             // 
-            this.odjaviSeToolStripMenuItem.Name = "odjaviSeToolStripMenuItem";
-            this.odjaviSeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.odjaviSeToolStripMenuItem.Text = "&Odjavi se";
-            this.odjaviSeToolStripMenuItem.Click += new System.EventHandler(this.odjaviSeToolStripMenuItem_Click);
+            this.mnuDatotekaIspis.Name = "mnuDatotekaIspis";
+            this.mnuDatotekaIspis.Size = new System.Drawing.Size(164, 22);
+            this.mnuDatotekaIspis.Text = "&Ispis";
+            this.mnuDatotekaIspis.Click += new System.EventHandler(this.mnuDatotekaIspis_Click);
             // 
-            // zatvoriToolStripMenuItem
+            // mnuDatotekaSep1
             // 
-            this.zatvoriToolStripMenuItem.Name = "zatvoriToolStripMenuItem";
-            this.zatvoriToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.zatvoriToolStripMenuItem.Text = "&Zatvori aplikaciju";
-            this.zatvoriToolStripMenuItem.Click += new System.EventHandler(this.zatvoriToolStripMenuItem_Click);
+            this.mnuDatotekaSep1.Name = "mnuDatotekaSep1";
+            this.mnuDatotekaSep1.Size = new System.Drawing.Size(161, 6);
             // 
-            // dokumentiToolStripMenuItem
+            // mnuDatotekaOdjava
             // 
-            this.dokumentiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unosToolStripMenuItem,
-            this.pregledToolStripMenuItem,
-            this.generiraniToolStripMenuItem});
-            this.dokumentiToolStripMenuItem.Name = "dokumentiToolStripMenuItem";
-            this.dokumentiToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.dokumentiToolStripMenuItem.Text = "D&okumenti";
+            this.mnuDatotekaOdjava.Name = "mnuDatotekaOdjava";
+            this.mnuDatotekaOdjava.Size = new System.Drawing.Size(164, 22);
+            this.mnuDatotekaOdjava.Text = "&Odjavi se";
+            this.mnuDatotekaOdjava.Click += new System.EventHandler(this.mnuDatotekaOdjava_Click);
             // 
-            // unosToolStripMenuItem
+            // mnuDatotekaSep2
             // 
-            this.unosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.primkeToolStripMenuItem,
-            this.otpremniceToolStripMenuItem});
-            this.unosToolStripMenuItem.Name = "unosToolStripMenuItem";
-            this.unosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.unosToolStripMenuItem.Text = "&Unos";
+            this.mnuDatotekaSep2.Name = "mnuDatotekaSep2";
+            this.mnuDatotekaSep2.Size = new System.Drawing.Size(161, 6);
             // 
-            // primkeToolStripMenuItem
+            // mnuDatotekaZatvoriApp
             // 
-            this.primkeToolStripMenuItem.Name = "primkeToolStripMenuItem";
-            this.primkeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.primkeToolStripMenuItem.Text = "&Prijemnica";
-            this.primkeToolStripMenuItem.Click += new System.EventHandler(this.primkeToolStripMenuItem_Click);
+            this.mnuDatotekaZatvoriApp.Name = "mnuDatotekaZatvoriApp";
+            this.mnuDatotekaZatvoriApp.Size = new System.Drawing.Size(164, 22);
+            this.mnuDatotekaZatvoriApp.Text = "&Zatvori aplikaciju";
+            this.mnuDatotekaZatvoriApp.Click += new System.EventHandler(this.mnuDatotekaZatvoriApp_Click);
             // 
-            // otpremniceToolStripMenuItem
+            // mnuDokumenti
             // 
-            this.otpremniceToolStripMenuItem.Name = "otpremniceToolStripMenuItem";
-            this.otpremniceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.otpremniceToolStripMenuItem.Text = "&Otpremnica";
-            this.otpremniceToolStripMenuItem.Click += new System.EventHandler(this.otpremniceToolStripMenuItem_Click);
+            this.mnuDokumenti.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDokumentiUnos,
+            this.mnuDokumentiPregled,
+            this.mnuDokumentiGeneriranje});
+            this.mnuDokumenti.Name = "mnuDokumenti";
+            this.mnuDokumenti.Size = new System.Drawing.Size(78, 20);
+            this.mnuDokumenti.Text = "D&okumenti";
             // 
-            // pregledToolStripMenuItem
+            // mnuDokumentiUnos
             // 
-            this.pregledToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.primkToolStripMenuItem,
-            this.otpremniciToolStripMenuItem});
-            this.pregledToolStripMenuItem.Name = "pregledToolStripMenuItem";
-            this.pregledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pregledToolStripMenuItem.Text = "&Pregled";
+            this.mnuDokumentiUnos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDokumentiUnosPrijemnica,
+            this.mnuDokumentiUnosOtpremnica});
+            this.mnuDokumentiUnos.Name = "mnuDokumentiUnos";
+            this.mnuDokumentiUnos.Size = new System.Drawing.Size(152, 22);
+            this.mnuDokumentiUnos.Text = "&Unos";
             // 
-            // primkToolStripMenuItem
+            // mnuDokumentiUnosPrijemnica
             // 
-            this.primkToolStripMenuItem.Name = "primkToolStripMenuItem";
-            this.primkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.primkToolStripMenuItem.Text = "&Prijemnica";
-            this.primkToolStripMenuItem.Click += new System.EventHandler(this.primkToolStripMenuItem_Click);
+            this.mnuDokumentiUnosPrijemnica.Name = "mnuDokumentiUnosPrijemnica";
+            this.mnuDokumentiUnosPrijemnica.Size = new System.Drawing.Size(137, 22);
+            this.mnuDokumentiUnosPrijemnica.Text = "&Prijemnica";
+            this.mnuDokumentiUnosPrijemnica.Click += new System.EventHandler(this.mnuDokumentiUnosPrijemnica_Click);
             // 
-            // otpremniciToolStripMenuItem
+            // mnuDokumentiUnosOtpremnica
             // 
-            this.otpremniciToolStripMenuItem.Name = "otpremniciToolStripMenuItem";
-            this.otpremniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.otpremniciToolStripMenuItem.Text = "&Otpremnica";
-            this.otpremniciToolStripMenuItem.Click += new System.EventHandler(this.otpremniciToolStripMenuItem_Click);
+            this.mnuDokumentiUnosOtpremnica.Name = "mnuDokumentiUnosOtpremnica";
+            this.mnuDokumentiUnosOtpremnica.Size = new System.Drawing.Size(137, 22);
+            this.mnuDokumentiUnosOtpremnica.Text = "&Otpremnica";
+            this.mnuDokumentiUnosOtpremnica.Click += new System.EventHandler(this.mnuDokumentiUnosOtpremnica_Click);
             // 
-            // generiraniToolStripMenuItem
+            // mnuDokumentiPregled
             // 
-            this.generiraniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.narudžbeniceToolStripMenuItem});
-            this.generiraniToolStripMenuItem.Name = "generiraniToolStripMenuItem";
-            this.generiraniToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.generiraniToolStripMenuItem.Text = "&Generiranje";
+            this.mnuDokumentiPregled.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDokumentiPregledPrijemnica,
+            this.mnuDokumentiPregledOtpremnica});
+            this.mnuDokumentiPregled.Name = "mnuDokumentiPregled";
+            this.mnuDokumentiPregled.Size = new System.Drawing.Size(152, 22);
+            this.mnuDokumentiPregled.Text = "&Pregled";
             // 
-            // narudžbeniceToolStripMenuItem
+            // mnuDokumentiPregledPrijemnica
             // 
-            this.narudžbeniceToolStripMenuItem.Name = "narudžbeniceToolStripMenuItem";
-            this.narudžbeniceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.narudžbeniceToolStripMenuItem.Text = "&Narudžbenice";
-            this.narudžbeniceToolStripMenuItem.Click += new System.EventHandler(this.narudžbeniceToolStripMenuItem_Click);
+            this.mnuDokumentiPregledPrijemnica.Name = "mnuDokumentiPregledPrijemnica";
+            this.mnuDokumentiPregledPrijemnica.Size = new System.Drawing.Size(137, 22);
+            this.mnuDokumentiPregledPrijemnica.Text = "&Prijemnica";
+            this.mnuDokumentiPregledPrijemnica.Click += new System.EventHandler(this.mnuDokumentiPregledPrijemnica_Click);
             // 
-            // artikliToolStripMenuItem
+            // mnuDokumentiPregledOtpremnica
             // 
-            this.artikliToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unosNovogToolStripMenuItem,
-            this.pregledToolStripMenuItem1});
-            this.artikliToolStripMenuItem.Name = "artikliToolStripMenuItem";
-            this.artikliToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.artikliToolStripMenuItem.Text = "&Artikli";
+            this.mnuDokumentiPregledOtpremnica.Name = "mnuDokumentiPregledOtpremnica";
+            this.mnuDokumentiPregledOtpremnica.Size = new System.Drawing.Size(137, 22);
+            this.mnuDokumentiPregledOtpremnica.Text = "&Otpremnica";
+            this.mnuDokumentiPregledOtpremnica.Click += new System.EventHandler(this.mnuDokumentiPregledOtpremnica_Click);
             // 
-            // unosNovogToolStripMenuItem
+            // mnuDokumentiGeneriranje
             // 
-            this.unosNovogToolStripMenuItem.Name = "unosNovogToolStripMenuItem";
-            this.unosNovogToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.unosNovogToolStripMenuItem.Text = "&Unos";
-            this.unosNovogToolStripMenuItem.Click += new System.EventHandler(this.unosNovogToolStripMenuItem_Click);
+            this.mnuDokumentiGeneriranje.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDokumentiGeneriranjeNarudzbenice});
+            this.mnuDokumentiGeneriranje.Name = "mnuDokumentiGeneriranje";
+            this.mnuDokumentiGeneriranje.Size = new System.Drawing.Size(152, 22);
+            this.mnuDokumentiGeneriranje.Text = "&Generiranje";
             // 
-            // pregledToolStripMenuItem1
+            // mnuDokumentiGeneriranjeNarudzbenice
             // 
-            this.pregledToolStripMenuItem1.Name = "pregledToolStripMenuItem1";
-            this.pregledToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.pregledToolStripMenuItem1.Text = "&Pregled";
-            this.pregledToolStripMenuItem1.Click += new System.EventHandler(this.pregledToolStripMenuItem1_Click);
+            this.mnuDokumentiGeneriranjeNarudzbenice.Name = "mnuDokumentiGeneriranjeNarudzbenice";
+            this.mnuDokumentiGeneriranjeNarudzbenice.Size = new System.Drawing.Size(147, 22);
+            this.mnuDokumentiGeneriranjeNarudzbenice.Text = "&Narudžbenice";
+            this.mnuDokumentiGeneriranjeNarudzbenice.Click += new System.EventHandler(this.mnuDokumentiGeneriranjeNarudzbenice_Click);
             // 
-            // upravljanjeToolStripMenuItem
+            // mnuArtikli
             // 
-            this.upravljanjeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kupciToolStripMenuItem,
-            this.dobavljačiToolStripMenuItem,
-            this.zaposleniciToolStripMenuItem});
-            this.upravljanjeToolStripMenuItem.Name = "upravljanjeToolStripMenuItem";
-            this.upravljanjeToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.upravljanjeToolStripMenuItem.Text = "&Upravljanje";
+            this.mnuArtikli.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuArtikliUnos,
+            this.mnuArtikliPregled});
+            this.mnuArtikli.Name = "mnuArtikli";
+            this.mnuArtikli.Size = new System.Drawing.Size(50, 20);
+            this.mnuArtikli.Text = "&Artikli";
             // 
-            // kupciToolStripMenuItem
+            // mnuArtikliUnos
             // 
-            this.kupciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.noviKupacToolStripMenuItem,
-            this.pregledToolStripMenuItem2});
-            this.kupciToolStripMenuItem.Name = "kupciToolStripMenuItem";
-            this.kupciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.kupciToolStripMenuItem.Text = "&Kupci";
+            this.mnuArtikliUnos.Name = "mnuArtikliUnos";
+            this.mnuArtikliUnos.Size = new System.Drawing.Size(152, 22);
+            this.mnuArtikliUnos.Text = "&Unos";
+            this.mnuArtikliUnos.Click += new System.EventHandler(this.mnuArtikliUnos_Click);
             // 
-            // noviKupacToolStripMenuItem
+            // mnuArtikliPregled
             // 
-            this.noviKupacToolStripMenuItem.Name = "noviKupacToolStripMenuItem";
-            this.noviKupacToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.noviKupacToolStripMenuItem.Text = "&Novi";
-            this.noviKupacToolStripMenuItem.Click += new System.EventHandler(this.noviKupacToolStripMenuItem_Click);
+            this.mnuArtikliPregled.Name = "mnuArtikliPregled";
+            this.mnuArtikliPregled.Size = new System.Drawing.Size(152, 22);
+            this.mnuArtikliPregled.Text = "&Pregled";
+            this.mnuArtikliPregled.Click += new System.EventHandler(this.mnuArtikliPregled_Click);
             // 
-            // pregledToolStripMenuItem2
+            // mnuAdministracija
             // 
-            this.pregledToolStripMenuItem2.Name = "pregledToolStripMenuItem2";
-            this.pregledToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.pregledToolStripMenuItem2.Text = "&Pregled";
-            this.pregledToolStripMenuItem2.Click += new System.EventHandler(this.pregledToolStripMenuItem2_Click);
+            this.mnuAdministracija.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAdministracijaKupci,
+            this.mnuAdministracijaDobavljaci,
+            this.mnuAdministracijaZaposlenici,
+            this.mnuAdministracijaSkladiste,
+            this.mnuAdministracijaSep1,
+            this.mnuAdministracijaPostavke});
+            this.mnuAdministracija.Name = "mnuAdministracija";
+            this.mnuAdministracija.Size = new System.Drawing.Size(95, 20);
+            this.mnuAdministracija.Text = "Ad&ministracija";
             // 
-            // dobavljačiToolStripMenuItem
+            // mnuAdministracijaKupci
             // 
-            this.dobavljačiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.noviToolStripMenuItem,
-            this.pregledToolStripMenuItem3});
-            this.dobavljačiToolStripMenuItem.Name = "dobavljačiToolStripMenuItem";
-            this.dobavljačiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dobavljačiToolStripMenuItem.Text = "&Dobavljači";
+            this.mnuAdministracijaKupci.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAdministracijaKupciUnos,
+            this.mnuAdministracijaKupciPregled});
+            this.mnuAdministracijaKupci.Name = "mnuAdministracijaKupci";
+            this.mnuAdministracijaKupci.Size = new System.Drawing.Size(152, 22);
+            this.mnuAdministracijaKupci.Text = "&Kupci";
             // 
-            // noviToolStripMenuItem
+            // mnuAdministracijaKupciUnos
             // 
-            this.noviToolStripMenuItem.Name = "noviToolStripMenuItem";
-            this.noviToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.noviToolStripMenuItem.Text = "&Novi";
-            this.noviToolStripMenuItem.Click += new System.EventHandler(this.noviToolStripMenuItem_Click);
+            this.mnuAdministracijaKupciUnos.Name = "mnuAdministracijaKupciUnos";
+            this.mnuAdministracijaKupciUnos.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaKupciUnos.Text = "&Unos";
+            this.mnuAdministracijaKupciUnos.Click += new System.EventHandler(this.mnuAdministracijaKupciUnos_Click);
             // 
-            // pregledToolStripMenuItem3
+            // mnuAdministracijaKupciPregled
             // 
-            this.pregledToolStripMenuItem3.Name = "pregledToolStripMenuItem3";
-            this.pregledToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.pregledToolStripMenuItem3.Text = "&Pregled";
-            this.pregledToolStripMenuItem3.Click += new System.EventHandler(this.pregledToolStripMenuItem3_Click);
+            this.mnuAdministracijaKupciPregled.Name = "mnuAdministracijaKupciPregled";
+            this.mnuAdministracijaKupciPregled.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaKupciPregled.Text = "&Pregled";
+            this.mnuAdministracijaKupciPregled.Click += new System.EventHandler(this.mnuAdministracijaKupciPregled_Click);
             // 
-            // zaposleniciToolStripMenuItem
+            // mnuAdministracijaDobavljaci
             // 
-            this.zaposleniciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.noviToolStripMenuItem1,
-            this.pregledToolStripMenuItem4});
-            this.zaposleniciToolStripMenuItem.Name = "zaposleniciToolStripMenuItem";
-            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.zaposleniciToolStripMenuItem.Text = "&Zaposlenici";
+            this.mnuAdministracijaDobavljaci.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAdministracijaDobavljaciUnos,
+            this.mnuAdministracijaDobavljaciPregled});
+            this.mnuAdministracijaDobavljaci.Name = "mnuAdministracijaDobavljaci";
+            this.mnuAdministracijaDobavljaci.Size = new System.Drawing.Size(152, 22);
+            this.mnuAdministracijaDobavljaci.Text = "&Dobavljači";
             // 
-            // noviToolStripMenuItem1
+            // mnuAdministracijaDobavljaciUnos
             // 
-            this.noviToolStripMenuItem1.Name = "noviToolStripMenuItem1";
-            this.noviToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.noviToolStripMenuItem1.Text = "&Novi";
-            this.noviToolStripMenuItem1.Click += new System.EventHandler(this.noviToolStripMenuItem1_Click);
+            this.mnuAdministracijaDobavljaciUnos.Name = "mnuAdministracijaDobavljaciUnos";
+            this.mnuAdministracijaDobavljaciUnos.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaDobavljaciUnos.Text = "&Unos";
+            this.mnuAdministracijaDobavljaciUnos.Click += new System.EventHandler(this.mnuAdministracijaDobavljaciUnos_Click);
             // 
-            // pregledToolStripMenuItem4
+            // mnuAdministracijaDobavljaciPregled
             // 
-            this.pregledToolStripMenuItem4.Name = "pregledToolStripMenuItem4";
-            this.pregledToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
-            this.pregledToolStripMenuItem4.Text = "&Pregled";
-            this.pregledToolStripMenuItem4.Click += new System.EventHandler(this.pregledToolStripMenuItem4_Click);
+            this.mnuAdministracijaDobavljaciPregled.Name = "mnuAdministracijaDobavljaciPregled";
+            this.mnuAdministracijaDobavljaciPregled.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaDobavljaciPregled.Text = "&Pregled";
+            this.mnuAdministracijaDobavljaciPregled.Click += new System.EventHandler(this.mnuAdministracijaDobavljaciPregled_Click);
             // 
-            // pomoćToolStripMenuItem
+            // mnuAdministracijaZaposlenici
             // 
-            this.pomoćToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dokumentacijaToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.oNamaToolStripMenuItem});
-            this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
-            this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pomoćToolStripMenuItem.Text = "&Pomoć";
+            this.mnuAdministracijaZaposlenici.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAdministracijaZaposleniciUnos,
+            this.mnuAdministracijaZaposleniciPregled});
+            this.mnuAdministracijaZaposlenici.Name = "mnuAdministracijaZaposlenici";
+            this.mnuAdministracijaZaposlenici.Size = new System.Drawing.Size(152, 22);
+            this.mnuAdministracijaZaposlenici.Text = "&Zaposlenici";
             // 
-            // oNamaToolStripMenuItem
+            // mnuAdministracijaZaposleniciUnos
             // 
-            this.oNamaToolStripMenuItem.Name = "oNamaToolStripMenuItem";
-            this.oNamaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.oNamaToolStripMenuItem.Text = "&O nama...";
-            this.oNamaToolStripMenuItem.Click += new System.EventHandler(this.oNamaToolStripMenuItem_Click);
+            this.mnuAdministracijaZaposleniciUnos.Name = "mnuAdministracijaZaposleniciUnos";
+            this.mnuAdministracijaZaposleniciUnos.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaZaposleniciUnos.Text = "&Unos";
+            this.mnuAdministracijaZaposleniciUnos.Click += new System.EventHandler(this.mnuAdministracijaZaposleniciUnos_Click);
             // 
-            // dokumentacijaToolStripMenuItem
+            // mnuAdministracijaZaposleniciPregled
             // 
-            this.dokumentacijaToolStripMenuItem.Name = "dokumentacijaToolStripMenuItem";
-            this.dokumentacijaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.dokumentacijaToolStripMenuItem.Text = "&Dokumentacija";
-            this.dokumentacijaToolStripMenuItem.Click += new System.EventHandler(this.dokumentacijaToolStripMenuItem_Click);
+            this.mnuAdministracijaZaposleniciPregled.Name = "mnuAdministracijaZaposleniciPregled";
+            this.mnuAdministracijaZaposleniciPregled.Size = new System.Drawing.Size(114, 22);
+            this.mnuAdministracijaZaposleniciPregled.Text = "&Pregled";
+            this.mnuAdministracijaZaposleniciPregled.Click += new System.EventHandler(this.mnuAdministracijaZaposleniciPregled_Click);
             // 
-            // toolStripSeparator1
+            // mnuAdministracijaSkladiste
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            this.mnuAdministracijaSkladiste.Name = "mnuAdministracijaSkladiste";
+            this.mnuAdministracijaSkladiste.Size = new System.Drawing.Size(152, 22);
+            this.mnuAdministracijaSkladiste.Text = "&Skladište";
+            this.mnuAdministracijaSkladiste.Click += new System.EventHandler(this.mnuAdministracijaSkladiste_Click);
+            // 
+            // mnuAdministracijaSep1
+            // 
+            this.mnuAdministracijaSep1.Name = "mnuAdministracijaSep1";
+            this.mnuAdministracijaSep1.Size = new System.Drawing.Size(149, 6);
+            this.mnuAdministracijaSep1.Visible = false;
+            // 
+            // mnuAdministracijaPostavke
+            // 
+            this.mnuAdministracijaPostavke.Name = "mnuAdministracijaPostavke";
+            this.mnuAdministracijaPostavke.Size = new System.Drawing.Size(152, 22);
+            this.mnuAdministracijaPostavke.Text = "&Postavke";
+            this.mnuAdministracijaPostavke.Visible = false;
+            this.mnuAdministracijaPostavke.Click += new System.EventHandler(this.mnuAdministracijaPostavke_Click);
+            // 
+            // mnuProzori
+            // 
+            this.mnuProzori.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProzoriPoslaziVodopadno,
+            this.mnuProzoriPrikaziVertikalno,
+            this.mnuProzoriPrikaziHorizontalno,
+            this.mnuProzoriSep1,
+            this.mnuProzoriMinimizirajSve,
+            this.mnuProzoriVratiSve,
+            this.mnuProzoriPovecajSve,
+            this.mnuProzoriSep2,
+            this.mnuProzoriZatvoriSve});
+            this.mnuProzori.Name = "mnuProzori";
+            this.mnuProzori.Size = new System.Drawing.Size(56, 20);
+            this.mnuProzori.Text = "P&rozori";
+            // 
+            // mnuProzoriPoslaziVodopadno
+            // 
+            this.mnuProzoriPoslaziVodopadno.Name = "mnuProzoriPoslaziVodopadno";
+            this.mnuProzoriPoslaziVodopadno.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriPoslaziVodopadno.Text = "Po&slaži vodopadno  ";
+            this.mnuProzoriPoslaziVodopadno.Click += new System.EventHandler(this.mnuProzoriPoslaziVodopadno_Click);
+            // 
+            // mnuProzoriPrikaziVertikalno
+            // 
+            this.mnuProzoriPrikaziVertikalno.Name = "mnuProzoriPrikaziVertikalno";
+            this.mnuProzoriPrikaziVertikalno.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriPrikaziVertikalno.Text = "Prikaži &vertikalno  ";
+            this.mnuProzoriPrikaziVertikalno.Click += new System.EventHandler(this.mnuProzoriPrikaziVertikalno_Click);
+            // 
+            // mnuProzoriPrikaziHorizontalno
+            // 
+            this.mnuProzoriPrikaziHorizontalno.Name = "mnuProzoriPrikaziHorizontalno";
+            this.mnuProzoriPrikaziHorizontalno.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriPrikaziHorizontalno.Text = "Prikaži &horizontalno";
+            this.mnuProzoriPrikaziHorizontalno.Click += new System.EventHandler(this.mnuProzoriPrikaziHorizontalno_Click);
+            // 
+            // mnuProzoriSep1
+            // 
+            this.mnuProzoriSep1.Name = "mnuProzoriSep1";
+            this.mnuProzoriSep1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // mnuProzoriMinimizirajSve
+            // 
+            this.mnuProzoriMinimizirajSve.Name = "mnuProzoriMinimizirajSve";
+            this.mnuProzoriMinimizirajSve.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriMinimizirajSve.Text = "&Minimiziraj sve";
+            this.mnuProzoriMinimizirajSve.Click += new System.EventHandler(this.mnuProzoriMinimizirajSve_Click);
+            // 
+            // mnuProzoriVratiSve
+            // 
+            this.mnuProzoriVratiSve.Name = "mnuProzoriVratiSve";
+            this.mnuProzoriVratiSve.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriVratiSve.Text = "V&rati sve";
+            this.mnuProzoriVratiSve.Click += new System.EventHandler(this.mnuProzoriVratiSve_Click);
+            // 
+            // mnuProzoriPovecajSve
+            // 
+            this.mnuProzoriPovecajSve.Name = "mnuProzoriPovecajSve";
+            this.mnuProzoriPovecajSve.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriPovecajSve.Text = "P&ovećaj sve";
+            this.mnuProzoriPovecajSve.Click += new System.EventHandler(this.mnuProzoriPovecajSve_Click);
+            // 
+            // mnuProzoriSep2
+            // 
+            this.mnuProzoriSep2.Name = "mnuProzoriSep2";
+            this.mnuProzoriSep2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // mnuProzoriZatvoriSve
+            // 
+            this.mnuProzoriZatvoriSve.Name = "mnuProzoriZatvoriSve";
+            this.mnuProzoriZatvoriSve.Size = new System.Drawing.Size(180, 22);
+            this.mnuProzoriZatvoriSve.Text = "Z&atvori sve";
+            this.mnuProzoriZatvoriSve.Click += new System.EventHandler(this.mnuProzoriZatvoriSve_Click);
+            // 
+            // mnuPomoc
+            // 
+            this.mnuPomoc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPomocDokumentacija,
+            this.mnuPomocSep1,
+            this.mnuPomocONama});
+            this.mnuPomoc.Name = "mnuPomoc";
+            this.mnuPomoc.Size = new System.Drawing.Size(57, 20);
+            this.mnuPomoc.Text = "&Pomoć";
+            // 
+            // mnuPomocDokumentacija
+            // 
+            this.mnuPomocDokumentacija.Name = "mnuPomocDokumentacija";
+            this.mnuPomocDokumentacija.Size = new System.Drawing.Size(154, 22);
+            this.mnuPomocDokumentacija.Text = "&Dokumentacija";
+            this.mnuPomocDokumentacija.Click += new System.EventHandler(this.mnuPomocDokumentacija_Click);
+            // 
+            // mnuPomocSep1
+            // 
+            this.mnuPomocSep1.Name = "mnuPomocSep1";
+            this.mnuPomocSep1.Size = new System.Drawing.Size(151, 6);
+            // 
+            // mnuPomocONama
+            // 
+            this.mnuPomocONama.Name = "mnuPomocONama";
+            this.mnuPomocONama.Size = new System.Drawing.Size(154, 22);
+            this.mnuPomocONama.Text = "&O nama...";
+            this.mnuPomocONama.Click += new System.EventHandler(this.mnuPomocONama_Click);
+            // 
+            // stStrip
+            // 
+            this.stStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stStripStatusLabel});
+            this.stStrip.Location = new System.Drawing.Point(0, 540);
+            this.stStrip.Name = "stStrip";
+            this.stStrip.Size = new System.Drawing.Size(784, 22);
+            this.stStrip.TabIndex = 3;
+            // 
+            // stStripStatusLabel
+            // 
+            this.stStripStatusLabel.Name = "stStripStatusLabel";
+            this.stStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.stStripStatusLabel.Text = "toolStripStatusLabel1";
+            // 
+            // toolStrip
+            // 
+            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolSep1,
+            this.toolOdjava});
+            this.toolStrip.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Size = new System.Drawing.Size(784, 39);
+            this.toolStrip.TabIndex = 4;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolSep1
+            // 
+            this.toolSep1.Name = "toolSep1";
+            this.toolSep1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolOdjava
+            // 
+            this.toolOdjava.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolOdjava.Image = global::Skladiste_PI.Properties.Resources.odjava;
+            this.toolOdjava.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolOdjava.Name = "toolOdjava";
+            this.toolOdjava.Size = new System.Drawing.Size(36, 36);
+            this.toolOdjava.Text = "Odjava";
+            this.toolOdjava.Click += new System.EventHandler(this.mnuDatotekaOdjava_Click);
             // 
             // frmGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 515);
+            this.BackgroundImage = global::Skladiste_PI.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.toolStrip);
+            this.Controls.Add(this.stStrip);
             this.Controls.Add(this.mnuMeni);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMeni;
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frmGlavna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "5";
             this.Text = "PI Aplikacija za Skladište";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGlavna_FormClosing);
             this.Load += new System.EventHandler(this.frmGlavna_Load);
+            this.ResizeEnd += new System.EventHandler(this.frmGlavna_ResizeEnd);
+            this.Resize += new System.EventHandler(this.frmGlavna_Resize);
             this.mnuMeni.ResumeLayout(false);
             this.mnuMeni.PerformLayout();
+            this.stStrip.ResumeLayout(false);
+            this.stStrip.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,35 +546,58 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip mnuMeni;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zatvoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dokumentiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem primkeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otpremniceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem primkToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otpremniciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generiraniToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem narudžbeniceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem artikliToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unosNovogToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem upravljanjeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kupciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem noviKupacToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem dobavljačiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem noviToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem zaposleniciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem noviToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pregledToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem odjaviSeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dokumentacijaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem oNamaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuDatoteka;
+        private System.Windows.Forms.ToolStripMenuItem mnuDatotekaZatvoriApp;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumenti;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiUnos;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiUnosPrijemnica;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiUnosOtpremnica;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiPregled;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiPregledPrijemnica;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiPregledOtpremnica;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiGeneriranje;
+        private System.Windows.Forms.ToolStripMenuItem mnuDokumentiGeneriranjeNarudzbenice;
+        private System.Windows.Forms.ToolStripMenuItem mnuArtikli;
+        private System.Windows.Forms.ToolStripMenuItem mnuArtikliUnos;
+        private System.Windows.Forms.ToolStripMenuItem mnuArtikliPregled;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracija;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaKupci;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaKupciUnos;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaKupciPregled;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaDobavljaci;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaDobavljaciUnos;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaDobavljaciPregled;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaZaposlenici;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaZaposleniciUnos;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaZaposleniciPregled;
+        private System.Windows.Forms.ToolStripMenuItem mnuDatotekaOdjava;
+        private System.Windows.Forms.ToolStripMenuItem mnuPomoc;
+        private System.Windows.Forms.ToolStripMenuItem mnuPomocDokumentacija;
+        private System.Windows.Forms.ToolStripSeparator mnuPomocSep1;
+        private System.Windows.Forms.ToolStripMenuItem mnuPomocONama;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaSkladiste;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzori;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriPoslaziVodopadno;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriPrikaziVertikalno;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriPrikaziHorizontalno;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriZatvoriSve;
+        private System.Windows.Forms.StatusStrip stStrip;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolSep1;
+        private System.Windows.Forms.ToolStripButton toolOdjava;
+        private System.Windows.Forms.ToolStripSeparator mnuDatotekaSep2;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripStatusLabel stStripStatusLabel;
+        private System.Windows.Forms.ToolStripSeparator mnuAdministracijaSep1;
+        private System.Windows.Forms.ToolStripMenuItem mnuAdministracijaPostavke;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriMinimizirajSve;
+        private System.Windows.Forms.ToolStripSeparator mnuProzoriSep1;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriPovecajSve;
+        private System.Windows.Forms.ToolStripSeparator mnuProzoriSep2;
+        private System.Windows.Forms.ToolStripMenuItem mnuProzoriVratiSve;
+        private System.Windows.Forms.ToolStripMenuItem mnuDatotekaIspis;
+        private System.Windows.Forms.ToolStripSeparator mnuDatotekaSep1;
 
     }
 }

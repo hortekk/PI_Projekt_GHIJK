@@ -19,5 +19,6 @@ namespace Skladiste_PI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmGlavna());
         }
+
     }
 }
