@@ -83,3 +83,6 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_P
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmSkladiste.resources
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.dll
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.pdb

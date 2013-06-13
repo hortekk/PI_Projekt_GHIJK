@@ -86,7 +86,7 @@ namespace Skladiste_PI
         /// Pokretanje child formi.
         /// </summary>
         /// <param name="forma">Naziv forme za pokrenuti.</param>
-        private void pokreniFormu(Form forma){
+        public void pokreniFormu(Form forma){
             forma.MdiParent = this;
             forma.Show();
         }

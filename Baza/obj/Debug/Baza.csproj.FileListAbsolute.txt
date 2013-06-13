@@ -3,3 +3,4 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\bin\Debug\Baza.pdb
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.csprojResolveAssemblyReference.cache
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.dll
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.pdb
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\bin\Debug\System.Data.SQLite.dll

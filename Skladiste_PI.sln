@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skladiste_PI", "Skladiste_PI\Skladiste_PI.csproj", "{57F1ECC5-254F-4C0E-8BAB-F6F1B2721211}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0CEC2C11-1D34-4CFC-A82F-9C8D001D0C18} = {0CEC2C11-1D34-4CFC-A82F-9C8D001D0C18}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baza", "Baza\Baza.csproj", "{0CEC2C11-1D34-4CFC-A82F-9C8D001D0C18}"
 EndProject
