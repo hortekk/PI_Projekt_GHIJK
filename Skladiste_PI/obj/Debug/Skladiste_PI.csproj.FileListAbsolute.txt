@@ -86,5 +86,35 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_P
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.dll
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.pdb
-D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\RdlCompile.cache
-D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\RdlCompile.compiled
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmSkladiste.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijemnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijemnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Skladiste_PI\obj\Debug\Skladiste_PI.pdb

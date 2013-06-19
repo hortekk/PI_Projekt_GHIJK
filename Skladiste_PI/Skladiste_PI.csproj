@@ -115,6 +115,7 @@
     <Compile Include="Forme\Dokumenti\Generiranje\frmGeneriraneNarudzbenice.Designer.cs">
       <DependentUpon>frmGeneriraneNarudzbenice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\Dokumenti\Unos\UnosPrijamnice.cs" />
     <Compile Include="Forme\frmIspis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +170,7 @@
     <Compile Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.Designer.cs">
       <DependentUpon>frmUnosOtpremnice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forme\Administracija\frmPostavke.resx">
@@ -225,19 +227,11 @@
     <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.resx">
       <DependentUpon>frmUnosOtpremnice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Izvjestaji\Artikli.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\Dobavljaci.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\Kupci.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\Otpremnice.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\Prijemnice.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\Zaposlenici.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\Baza.PoslovniPartner.datasource" />
-    <None Include="Properties\DataSources\Baza.Zaposlenik.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
