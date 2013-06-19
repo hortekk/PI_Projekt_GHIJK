@@ -40,7 +40,7 @@ namespace Skladiste_PI
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            frmUnosZaposlenika frmUnosZaposlenika = new frmUnosZaposlenika();
+            frmUnosZaposlenika frmUnosZaposlenika = new frmUnosZaposlenika(null);
             frmUnosZaposlenika.ShowDialog();
             DohvatiZaposlenike();
         }
@@ -85,16 +85,6 @@ namespace Skladiste_PI
         private void dgvZaposlenici_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnIzmjeni_Click(null,null);
-        }
-
-        private void dgvZaposlenici_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvZaposlenici_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
     }

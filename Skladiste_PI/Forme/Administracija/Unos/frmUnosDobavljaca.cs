@@ -31,11 +31,6 @@ namespace Skladiste_PI
             this.Close();
         }
 
-        private void frmUnosDobavljaca_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
 
     }

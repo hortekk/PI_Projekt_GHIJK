@@ -4,9 +4,3 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.csprojResolveA
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.dll
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\obj\Debug\Baza.pdb
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Baza\bin\Debug\System.Data.SQLite.dll
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\bin\Debug\Baza.dll
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\bin\Debug\Baza.pdb
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\bin\Debug\System.Data.SQLite.dll
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\obj\Debug\Baza.csprojResolveAssemblyReference.cache
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\obj\Debug\Baza.dll
-D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-master\Baza\obj\Debug\Baza.pdb

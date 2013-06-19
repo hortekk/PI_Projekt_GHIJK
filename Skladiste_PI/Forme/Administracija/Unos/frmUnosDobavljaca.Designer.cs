@@ -124,7 +124,6 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmUnosDobavljaca";
             this.Text = "frmUnosDobavljaca";
-            this.Load += new System.EventHandler(this.frmUnosDobavljaca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

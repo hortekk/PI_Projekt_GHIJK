@@ -126,7 +126,6 @@
             this.dgvDobavljaci.ShowEditingIcon = false;
             this.dgvDobavljaci.Size = new System.Drawing.Size(659, 312);
             this.dgvDobavljaci.TabIndex = 2;
-            this.dgvDobavljaci.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDobavljaci_CellContentClick);
             this.dgvDobavljaci.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDobavljaci_CellDoubleClick);
             // 
             // panelPozadina

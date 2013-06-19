@@ -31,19 +31,13 @@
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblDobavljac = new System.Windows.Forms.Label();
             this.lblZaposlenik = new System.Windows.Forms.Label();
-            this.DGVStavke = new System.Windows.Forms.DataGridView();
-            this.btnUnesiPrijemnicu = new System.Windows.Forms.Button();
+            this.txtZaposlenik = new System.Windows.Forms.TextBox();
+            this.txtDobavljac = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnUnesiOtpremincu = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnZatvori = new System.Windows.Forms.Button();
-            this.CBDobavljac = new System.Windows.Forms.ComboBox();
-            this.CMZaposlenik = new System.Windows.Forms.ComboBox();
-            this.btnDodajStavku = new System.Windows.Forms.Button();
-            this.Artikl = new System.Windows.Forms.Label();
-            this.CBArtikl = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVStavke)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatum
@@ -58,7 +52,7 @@
             // lblDobavljac
             // 
             this.lblDobavljac.AutoSize = true;
-            this.lblDobavljac.Location = new System.Drawing.Point(66, 61);
+            this.lblDobavljac.Location = new System.Drawing.Point(66, 56);
             this.lblDobavljac.Name = "lblDobavljac";
             this.lblDobavljac.Size = new System.Drawing.Size(54, 13);
             this.lblDobavljac.TabIndex = 1;
@@ -67,44 +61,53 @@
             // lblZaposlenik
             // 
             this.lblZaposlenik.AutoSize = true;
-            this.lblZaposlenik.Location = new System.Drawing.Point(66, 89);
+            this.lblZaposlenik.Location = new System.Drawing.Point(66, 84);
             this.lblZaposlenik.Name = "lblZaposlenik";
             this.lblZaposlenik.Size = new System.Drawing.Size(57, 13);
             this.lblZaposlenik.TabIndex = 2;
             this.lblZaposlenik.Text = "Zaposlenik";
             // 
-            // DGVStavke
+            // txtZaposlenik
             // 
-            this.DGVStavke.AllowUserToAddRows = false;
-            this.DGVStavke.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtZaposlenik.Location = new System.Drawing.Point(159, 84);
+            this.txtZaposlenik.Name = "txtZaposlenik";
+            this.txtZaposlenik.Size = new System.Drawing.Size(200, 21);
+            this.txtZaposlenik.TabIndex = 4;
+            // 
+            // txtDobavljac
+            // 
+            this.txtDobavljac.Location = new System.Drawing.Point(159, 56);
+            this.txtDobavljac.Name = "txtDobavljac";
+            this.txtDobavljac.Size = new System.Drawing.Size(200, 21);
+            this.txtDobavljac.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGVStavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVStavke.Location = new System.Drawing.Point(0, 138);
-            this.DGVStavke.Name = "DGVStavke";
-            this.DGVStavke.Size = new System.Drawing.Size(606, 157);
-            this.DGVStavke.TabIndex = 6;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 138);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(606, 157);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // btnUnesiPrijemnicu
+            // btnUnesiOtpremincu
             // 
-            this.btnUnesiPrijemnicu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUnesiPrijemnicu.Location = new System.Drawing.Point(438, 373);
-            this.btnUnesiPrijemnicu.Name = "btnUnesiPrijemnicu";
-            this.btnUnesiPrijemnicu.Size = new System.Drawing.Size(75, 23);
-            this.btnUnesiPrijemnicu.TabIndex = 7;
-            this.btnUnesiPrijemnicu.Text = "Unesi";
-            this.btnUnesiPrijemnicu.UseVisualStyleBackColor = true;
-            this.btnUnesiPrijemnicu.Click += new System.EventHandler(this.btnUnesiPrijemnicu_Click);
+            this.btnUnesiOtpremincu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUnesiOtpremincu.Location = new System.Drawing.Point(438, 373);
+            this.btnUnesiOtpremincu.Name = "btnUnesiOtpremincu";
+            this.btnUnesiOtpremincu.Size = new System.Drawing.Size(75, 23);
+            this.btnUnesiOtpremincu.TabIndex = 7;
+            this.btnUnesiOtpremincu.Text = "Unesi";
+            this.btnUnesiOtpremincu.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(159, 30);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 7, 14, 0, 0, 0, 0);
             // 
             // btnZatvori
             // 
@@ -118,92 +121,18 @@
             this.btnZatvori.UseVisualStyleBackColor = true;
             this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
-            // CBDobavljac
-            // 
-            this.CBDobavljac.FormattingEnabled = true;
-            this.CBDobavljac.Location = new System.Drawing.Point(159, 58);
-            this.CBDobavljac.Name = "CBDobavljac";
-            this.CBDobavljac.Size = new System.Drawing.Size(200, 21);
-            this.CBDobavljac.TabIndex = 10;
-            // 
-            // CMZaposlenik
-            // 
-            this.CMZaposlenik.FormattingEnabled = true;
-            this.CMZaposlenik.Location = new System.Drawing.Point(159, 86);
-            this.CMZaposlenik.Name = "CMZaposlenik";
-            this.CMZaposlenik.Size = new System.Drawing.Size(200, 21);
-            this.CMZaposlenik.TabIndex = 11;
-            // 
-            // btnDodajStavku
-            // 
-            this.btnDodajStavku.Location = new System.Drawing.Point(349, 373);
-            this.btnDodajStavku.Name = "btnDodajStavku";
-            this.btnDodajStavku.Size = new System.Drawing.Size(83, 23);
-            this.btnDodajStavku.TabIndex = 12;
-            this.btnDodajStavku.Text = "Dodaj Stavku";
-            this.btnDodajStavku.UseVisualStyleBackColor = true;
-            this.btnDodajStavku.Click += new System.EventHandler(this.btnDodajStavku_Click);
-            // 
-            // Artikl
-            // 
-            this.Artikl.AutoSize = true;
-            this.Artikl.Location = new System.Drawing.Point(365, 61);
-            this.Artikl.Name = "Artikl";
-            this.Artikl.Size = new System.Drawing.Size(72, 13);
-            this.Artikl.TabIndex = 13;
-            this.Artikl.Text = "Odabir Artikla";
-            // 
-            // CBArtikl
-            // 
-            this.CBArtikl.FormattingEnabled = true;
-            this.CBArtikl.Location = new System.Drawing.Point(443, 58);
-            this.CBArtikl.Name = "CBArtikl";
-            this.CBArtikl.Size = new System.Drawing.Size(151, 21);
-            this.CBArtikl.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Kolicina";
-            // 
-            // txtKolicina
-            // 
-            this.txtKolicina.Location = new System.Drawing.Point(443, 86);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(151, 21);
-            this.txtKolicina.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(411, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "UNOS STAVKI DOKUMENTA";
-            // 
             // frmUnosPrijemnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnZatvori;
             this.ClientSize = new System.Drawing.Size(606, 408);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtKolicina);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CBArtikl);
-            this.Controls.Add(this.Artikl);
-            this.Controls.Add(this.btnDodajStavku);
-            this.Controls.Add(this.CMZaposlenik);
-            this.Controls.Add(this.CBDobavljac);
             this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btnUnesiPrijemnicu);
-            this.Controls.Add(this.DGVStavke);
+            this.Controls.Add(this.btnUnesiOtpremincu);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtDobavljac);
+            this.Controls.Add(this.txtZaposlenik);
             this.Controls.Add(this.lblZaposlenik);
             this.Controls.Add(this.lblDobavljac);
             this.Controls.Add(this.lblDatum);
@@ -211,8 +140,7 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmUnosPrijemnice";
             this.Text = "Unos prijemnice";
-            this.Load += new System.EventHandler(this.frmUnosPrijemnice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVStavke)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,17 +151,11 @@
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblDobavljac;
         private System.Windows.Forms.Label lblZaposlenik;
-        private System.Windows.Forms.DataGridView DGVStavke;
-        private System.Windows.Forms.Button btnUnesiPrijemnicu;
+        private System.Windows.Forms.TextBox txtZaposlenik;
+        private System.Windows.Forms.TextBox txtDobavljac;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnUnesiOtpremincu;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnZatvori;
-        private System.Windows.Forms.ComboBox CBDobavljac;
-        private System.Windows.Forms.ComboBox CMZaposlenik;
-        private System.Windows.Forms.Button btnDodajStavku;
-        private System.Windows.Forms.Label Artikl;
-        private System.Windows.Forms.ComboBox CBArtikl;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtKolicina;
-        private System.Windows.Forms.Label label2;
     }
 }
