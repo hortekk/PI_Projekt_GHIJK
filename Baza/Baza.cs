@@ -19,7 +19,7 @@ namespace Baza
         /// </summary>
         private Baza()
         {
-            connectionString = @"Data Source=D:\PIBaza.db3";
+            connectionString = @"Data Source=PIBaza.db3";
             Connection = new SQLiteConnection(ConnectionString);
 
             Connection.Open();

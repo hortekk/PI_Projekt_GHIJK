@@ -89,5 +89,10 @@ namespace Skladiste_PI
             btnIzmjeni_Click(null,null);
         }
 
+        private void dgvDobavljaci_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }
