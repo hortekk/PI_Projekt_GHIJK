@@ -187,6 +187,12 @@ namespace Baza
             return lista;
         }
 
+        public int CurrentID()
+        {
+            string sqlUpit = "SELECT MAX(idZaposlenika) FROM Zaposlenik";
+            return int.Parse(Baza.Instance.DohvatiVrijednost(sqlUpit).ToString());
+        }
+
         /// <summary>
         /// Metoda koja nadjačava ToString metodu
         /// </summary>

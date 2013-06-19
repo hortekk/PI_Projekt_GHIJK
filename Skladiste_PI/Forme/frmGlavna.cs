@@ -258,5 +258,37 @@ namespace Skladiste_PI
             mnuProzoriZatvoriSve_Click(null,null);
         }
 
+        private void mnuDokumentiIspisPrijemnica_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(0));
+        }
+
+        private void mnuDokumentiIspisOtpremnica_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(1));
+        }
+
+        private void mnuArtikliIspis_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(2));
+        }
+
+        private void mnuAdministracijaKupciIspis_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(3));
+        }
+
+        private void mnuAdministracijaDobavljaciIspis_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(4));
+        }
+
+        private void mnuAdministracijaZaposleniciIspis_Click(object sender, EventArgs e)
+        {
+            pokreniFormu(new frmIspis(5));
+        }
+
+
+
     }
 }

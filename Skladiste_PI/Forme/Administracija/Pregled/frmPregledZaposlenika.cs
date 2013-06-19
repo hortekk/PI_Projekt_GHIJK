@@ -40,7 +40,7 @@ namespace Skladiste_PI
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            frmUnosZaposlenika frmUnosZaposlenika = new frmUnosZaposlenika();
+            frmUnosZaposlenika frmUnosZaposlenika = new frmUnosZaposlenika(null);
             frmUnosZaposlenika.ShowDialog();
             DohvatiZaposlenike();
         }
