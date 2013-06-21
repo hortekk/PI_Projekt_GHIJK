@@ -41,6 +41,7 @@
     <Compile Include="Artikli.cs" />
     <Compile Include="Baza.cs" />
     <Compile Include="Administrator.cs" />
+    <Compile Include="KategorijaArtikla.cs" />
     <Compile Include="Otpremnica.cs" />
     <Compile Include="PregledOtpremnica.cs" />
     <Compile Include="PregledOtpremnicaStavke.cs" />

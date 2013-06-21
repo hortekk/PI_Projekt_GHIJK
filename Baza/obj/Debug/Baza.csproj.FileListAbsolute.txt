@@ -16,3 +16,9 @@ D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\B
 D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Baza\obj\Debug\Baza.csprojResolveAssemblyReference.cache
 D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Baza\obj\Debug\Baza.dll
 D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK-UNOS OTRP I PRIJ\Baza\obj\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\obj\Debug\Baza.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\obj\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK v8-9\Baza\obj\Debug\Baza.pdb

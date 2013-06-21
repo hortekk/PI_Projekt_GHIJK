@@ -199,6 +199,7 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmPregledArtikla";
             this.Text = "frmPregledArtikla";
+            this.Load += new System.EventHandler(this.frmPregledArtikla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
