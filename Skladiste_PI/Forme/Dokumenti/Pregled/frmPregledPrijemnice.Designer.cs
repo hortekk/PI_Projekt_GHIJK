@@ -42,12 +42,12 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DGVPrijamnice = new System.Windows.Forms.DataGridView();
+            this.DGVStavke2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPrijamnice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVStavke2)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
@@ -164,44 +164,46 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dataGridView1
+            // DGVPrijamnice
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DGVPrijamnice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(691, 154);
-            this.dataGridView1.TabIndex = 1;
+            this.DGVPrijamnice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVPrijamnice.Location = new System.Drawing.Point(0, 28);
+            this.DGVPrijamnice.Name = "DGVPrijamnice";
+            this.DGVPrijamnice.Size = new System.Drawing.Size(691, 154);
+            this.DGVPrijamnice.TabIndex = 1;
+            this.DGVPrijamnice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPrijamnice_CellClick);
             // 
-            // dataGridView2
+            // DGVStavke2
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGVStavke2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 188);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(691, 174);
-            this.dataGridView2.TabIndex = 2;
+            this.DGVStavke2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVStavke2.Location = new System.Drawing.Point(0, 188);
+            this.DGVStavke2.Name = "DGVStavke2";
+            this.DGVStavke2.Size = new System.Drawing.Size(691, 174);
+            this.DGVStavke2.TabIndex = 2;
             // 
             // frmPregledPrijemnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 362);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVStavke2);
+            this.Controls.Add(this.DGVPrijamnice);
             this.Controls.Add(this.bindingNavigator1);
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmPregledPrijemnice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPregledPrijemnice";
+            this.Load += new System.EventHandler(this.frmPregledPrijemnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVPrijamnice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVStavke2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +223,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DGVPrijamnice;
+        private System.Windows.Forms.DataGridView DGVStavke2;
     }
 }

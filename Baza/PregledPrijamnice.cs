@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Baza
 {
-    public class Otpremnica
+    public class PregledPrijamnice
     {
 
         private int p_idDokumenta;
@@ -14,13 +14,21 @@ namespace Baza
         private int p_idPP;
         private string p_DatumIzdavanja;
         private string p_TipDokumenta;
-      
+        private string p_ime;
+        private string p_prezime;
+        private string p_imenaziv;
+        private string p_prezimevrsta;
+        private string p_imeartikla;
+        private int p_idartikla;
+        private int p_kol;
+        private int p_iddokumenta;
+
 
 
         /// <summary>
         /// Konstruktor dotične klase
         /// </summary>
-        public Otpremnica()
+        public PregledPrijamnice()
         {
 
         }
@@ -29,17 +37,22 @@ namespace Baza
         /// Puni objekt sa podacima o dokumentu
         /// </summary>
         /// <param name="dr">DataReader objekt sa podacima o dokumentima</param>
-        public Otpremnica(DbDataReader dr)
+        public PregledPrijamnice(DbDataReader dr)
         {
             if (dr != null)
             {
 
-              
+                p_ime = dr["Ime"].ToString();
+                p_prezime = dr["Prezime"].ToString();
+                p_imenaziv = dr["ImeNaziv"].ToString();
+                p_prezimevrsta = dr["PrezimeVrsta"].ToString();
                 p_idDokumenta = int.Parse(dr["idDokumenta"].ToString());
                 p_idOvlasteneOsobe = int.Parse(dr["idOvlasteneOsobe"].ToString());
-                p_idPP = int.Parse(dr["idPP"].ToString()); 
+                p_idPP = int.Parse(dr["idPP"].ToString());
                 p_DatumIzdavanja = dr["DatumIzdavanja"].ToString();
                 p_TipDokumenta = dr["TipDokumenta"].ToString();
+
+
 
             }
 
@@ -54,7 +67,7 @@ namespace Baza
             {
                 return p_idDokumenta;
             }
-           set
+            set
             {
                 if (p_idDokumenta != value) p_idDokumenta = value;
             }
@@ -120,7 +133,52 @@ namespace Baza
             }
         }
 
-      
+        public string Ime
+        {
+            get
+            {
+                return p_ime;
+            }
+            set
+            {
+                if (p_ime != value) p_ime = value;
+            }
+        }
+
+        public string Prezime
+        {
+            get
+            {
+                return p_prezime;
+            }
+            set
+            {
+                if (p_prezime != value) p_prezime = value;
+            }
+        }
+        public string ImeNaziv
+        {
+            get
+            {
+                return p_imenaziv;
+            }
+            set
+            {
+                if (p_imenaziv != value) p_imenaziv = value;
+            }
+        }
+        public string PrezimeVrsta
+        {
+            get
+            {
+                return p_prezimevrsta;
+            }
+            set
+            {
+                if (p_prezimevrsta != value) p_prezimevrsta = value;
+            }
+        }
+
 
 
         /// <summary>
@@ -151,22 +209,29 @@ namespace Baza
         /// Dohvaća sve zaposlenike iz baze i vraća ih u obliku generičke liste
         /// </summary>
         /// <returns>Lista zaposlenika</returns>
-        public static List<Otpremnica> DohvatiDokumente()
+
+
+
+        public static List<PregledPrijamnice> DohvatiOtpremnicu()
         {
-            List<Otpremnica> lista = new List<Otpremnica>();
-            string sqlUpit = "SELECT * FROM Dokument";
+
+            List<PregledPrijamnice> lista = new List<PregledPrijamnice>();
+            string sqlUpit = "SELECT Dokument.idDokumenta, Dokument.idOvlasteneOsobe,Dokument.idPP, Dokument.TipDokumenta,Zaposlenik.Ime , Zaposlenik.Prezime, PoslovniPartner.ImeNaziv, PoslovniPartner.PrezimeVrsta,Dokument.DatumIzdavanja FROM Dokument,PoslovniPartner,Zaposlenik WHERE Dokument.idOvlasteneOsobe=Zaposlenik.idZaposlenika AND Dokument.idPP=PoslovniPartner.idPP AND TipDokumenta=1";
             DbDataReader dr = Baza.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
-                Otpremnica dokument = new Otpremnica(dr);
+
+                PregledPrijamnice dokument = new PregledPrijamnice(dr);
+
                 lista.Add(dokument);
+
             }
             dr.Close();
             return lista;
         }
 
 
-       
+
 
 
 
@@ -180,3 +245,4 @@ namespace Baza
     }
 
 }
+

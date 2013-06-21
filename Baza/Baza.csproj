@@ -42,6 +42,10 @@
     <Compile Include="Baza.cs" />
     <Compile Include="Administrator.cs" />
     <Compile Include="Otpremnica.cs" />
+    <Compile Include="PregledOtpremnica.cs" />
+    <Compile Include="PregledOtpremnicaStavke.cs" />
+    <Compile Include="PregledPrijamnice.cs" />
+    <Compile Include="PregledPrijamniceStavke.cs" />
     <Compile Include="Prijamnice.cs" />
     <Compile Include="StavkeDokumenta.cs" />
     <Compile Include="TipPP.cs" />

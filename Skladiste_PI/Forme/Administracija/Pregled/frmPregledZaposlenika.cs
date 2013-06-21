@@ -34,7 +34,7 @@ namespace Skladiste_PI
         private void frmPregledZaposlenika_Load(object sender, EventArgs e)
         {
             DohvatiZaposlenike();
-            dgvZaposlenici.Columns["idZaposlenika"].Visible = false;
+            dgvZaposlenici.Columns["Ime"].HeaderText = "ImeZaposlenika";
             dgvZaposlenici.Columns["BrojTelefona"].HeaderText = "Broj telefona";
         }
 

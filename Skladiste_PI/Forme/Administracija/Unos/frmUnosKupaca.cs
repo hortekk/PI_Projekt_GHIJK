@@ -30,5 +30,10 @@ namespace Skladiste_PI
         {
             this.Close();
         }
+
+        private void frmUnosKupaca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,8 +33,8 @@ namespace Baza
         {
             if (dr != null)
             {
-                p_idDokumenta = int.Parse(dr["idDokumenta"].ToString());
-                p_idArtikla = int.Parse(dr["idArtikla"].ToString());
+                p_idDokumenta = int.Parse(dr["idDok"].ToString());
+                p_idArtikla = int.Parse(dr["idArti"].ToString());
                 p_Kolicina = int.Parse(dr["Kolicina"].ToString()); 
                 
 
@@ -101,7 +101,7 @@ namespace Baza
         {
             string sqlUpit = "";
 
-            sqlUpit = "INSERT INTO StavkeDokumenta (idDokumenta, idArtikla, Kolicina) VALUES ('" + idDokumenta + "','" + idArtikla + "','" + Kolicina + "')";
+            sqlUpit = "INSERT INTO StavkeDokumenta (idDok, idArti, Kolicina) VALUES ('" + idDokumenta + "','" + idArtikla + "','" + Kolicina + "')";
 
 
             return Baza.Instance.IzvrsiUpit(sqlUpit);
@@ -113,7 +113,7 @@ namespace Baza
         /// <returns>Broj obrisanih redaka</returns>
         public int Obrisi()
         {
-            string sqlDelete = "DELETE FROM StavkeDokumenta WHERE idDokumenta = " + idDokumenta;
+            string sqlDelete = "DELETE FROM StavkeDokumenta WHERE idDok = " + idDokumenta;
             return Baza.Instance.IzvrsiUpit(sqlDelete);
         }
 
@@ -138,7 +138,7 @@ namespace Baza
         public static List<StavkeDokumenta> DohvatiStavke(int idDokumenta)
         {
             List<StavkeDokumenta> lista = new List<StavkeDokumenta>();
-            string sqlUpit = "SELECT * FROM StavkeDokumenta WHERE idDokumenta = " + idDokumenta.ToString();
+            string sqlUpit = "SELECT * FROM StavkeDokumenta WHERE idDok = " + idDokumenta.ToString();
             DbDataReader dr = Baza.Instance.DohvatiDataReader(sqlUpit);
             while (dr.Read())
             {
