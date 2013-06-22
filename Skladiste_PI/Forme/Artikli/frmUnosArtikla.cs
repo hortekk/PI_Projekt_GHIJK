@@ -52,18 +52,25 @@ namespace Skladiste_PI
 
         private void btnUnesi_Click(object sender, EventArgs e)
         {
-            if (artikli == null) artikli = new Artikli();
 
-            artikli.Naziv = textBox1.Text;
-            artikli.KolicinaNaSkladistu = int.Parse(textBox3.Text);
-            artikli.AlarmnaKolicina = int.Parse(textBox2.Text);
-            artikli.CijenaProdaje = int.Parse(textBox4.Text);
-            artikli.idKategorijeArtikla = int.Parse(comboBox1.SelectedValue.ToString());
+            if ((textBox1.TextLength > 0) && (textBox3.TextLength >= 0) && (textBox2.TextLength >= 0) && (textBox4.TextLength > 0))
+            {
+                if (artikli == null) artikli = new Artikli();
 
-            artikli.Spremi();
-            this.Close();
+                artikli.Naziv = textBox1.Text;
+                artikli.KolicinaNaSkladistu = int.Parse(textBox3.Text);
+                artikli.AlarmnaKolicina = int.Parse(textBox2.Text);
+                artikli.CijenaProdaje = int.Parse(textBox4.Text);
+                artikli.idKategorijeArtikla = int.Parse(comboBox1.SelectedValue.ToString());
+
+                artikli.Spremi();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Morate unijeti sva polja!", "Upozorenje!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
 
 
     }
