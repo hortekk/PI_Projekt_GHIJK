@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPregledZaposlenika));
             this.cmsUredjivanje = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuIzmjeni = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuObrisi = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,6 +151,7 @@
             this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.panelPozadina);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmPregledDobavljaca";
             this.Text = "Pregled dobavljača";

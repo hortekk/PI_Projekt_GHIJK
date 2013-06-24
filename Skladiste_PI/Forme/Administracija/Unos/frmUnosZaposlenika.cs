@@ -15,16 +15,12 @@ namespace Skladiste_PI
     {
         private Zaposlenik zaposlenik = null;
         private bool samoUnosIzmjena = false;
+        private bool novi = false;
+        private bool ZaustaviDretvu = false;
 
         public frmUnosZaposlenika()
         {
             InitializeComponent();
-            dohvatiPodatke();
-            dgvPodaci.Columns["idZaposlenika"].Visible = false;
-            dgvPodaci.Columns["Email"].Visible = false;
-            dgvPodaci.Columns["BrojTelefona"].Visible = false;
-            dgvPodaci.Columns["Adresa"].Visible = false;
-
         }
 
         public frmUnosZaposlenika(Zaposlenik odabraniZaposlenik)
@@ -38,8 +34,7 @@ namespace Skladiste_PI
 
         private void btnZatvori_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dgvPodaci.CurrentRow.Cells[1].Value.ToString());
-            //this.Close();
+            this.Close();
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -55,23 +50,25 @@ namespace Skladiste_PI
                         return;
                 }
             }
-
             zaposlenik = null;
             brisiPolja();
+            this.Text = "Unos novog zaposlenika";
+            novi = true;
             promjenaUnosIzmjena();
 
         }
 
         private void btnBrisi_Click(object sender, EventArgs e)
         {
-            if (zaposlenik == null)
+            if (zaposlenik == null && novi)
             {
+                novi = false;
                 promjenaUnosIzmjena();
-                oznaciPrviRed();
+                dgvPodaci_SelectionChanged(null,null);
                 return;
             }
 
-            // Brisanje korisnika
+            // Brisanje zaposlenika
             if (dgvPodaci.SelectedRows.Count > 0)
             {
                 switch (MessageBox.Show("Jeste li sigurni da želite obrisati označenog zaposlenika?", "Upit...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
@@ -79,55 +76,11 @@ namespace Skladiste_PI
                     case DialogResult.No:
                         return;
                 }
+                btnObrisi_Click(null,null);
                 zaposlenik.Obrisi();
-                dohvatiPodatke();
-            }
-
-            
-
-                                //DataRow redak = new object() as DataRow;
-                                //    redak = Dataset!!!....Tables("xy...Korisni??").Rows.Find(Koriime??)
-                                //if (redak != null)
-                                //        DS.Tables("xy...Korriid").Rows.Remove(redak)
-                                //for (int index = 0; index < dgvPodaci.RowCount; index++)
-                                //dgvPodaci.Rows.Remove(dgvPodaci.CurrentRow);
-                                //dgvPodaci.Refresh();
-                                //    if (int.Parse(dgvPodaci.Rows[index].Cells[0].Value.ToString()) == TrenutniID)
-                                //    {
-                                //        dgvPodaci.Rows.Remove(dgvPodaci.Rows[index]);
-                                //        dgvPodaci.Refresh();
-                                //    }
-                                //    else
-                                //    {
-                                //        MessageBox.Show("Došlo je do greške prilikom pronalaženja reda u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                //        return;
-                                //    }
-            //                else
-            //                {
-            //                    MessageBox.Show("Niste označili niti jedan red!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //                    return;
-            //                }
-            //            oznaciPrviRed();
-            //        }
-            //        catch
-            //        {
-            //            MessageBox.Show("Došlo je do greške prilikom brisanja podataka!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //        break;
-            //}
-        }
-
-        private void oznaciPrviRed()
-        {
-            if (dgvPodaci.Rows.Count <= 0) // || u DataSetu>0----Or (DS.Tables("xy.....Kor").Rows.Count <= 0)
-            {
-                //btnDodaj_Click(null, null);
-            }
-            else
-            {
+                dgvPodaci.Rows[0].Selected = true;
                 txtFilter.Text = "";
-                //dgvPodaci.SelectedRows[0].Selected = true;
-                //dgvPodaci_SelectionChanged(null, null);  testirat bez ovog!!!!!!!!!!!
+                dohvatiPodatke();
             }
         }
 
@@ -141,12 +94,19 @@ namespace Skladiste_PI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = this.MinimizeBox = false;
             this.MinimumSize = this.ClientSize = new System.Drawing.Size(360, 305);
+            panelUnos.Anchor = System.Windows.Forms.AnchorStyles.Left;
         }
 
+        /// <summary>
+        /// Postavlja pojedine kontrole (ne)dostupne prilikom unosa/izmjene
+        /// </summary>
         private void promjenaUnosIzmjena()
         {
-            btnDodaj.Enabled = panelZaposlenici.Enabled;
-            if (zaposlenik == null)
+            btnDodaj.Enabled = panelZaposlenici.Enabled = !novi;
+            if (dgvPodaci.RowCount <= 0) btnBrisi.Enabled = false;
+            else btnBrisi.Enabled = true;
+
+            if (novi)
             {
                 btnBrisi.Text = "Odust&ani";
                 return;
@@ -155,38 +115,27 @@ namespace Skladiste_PI
 
         }
 
-        private void frmUnosZaposlenika_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (dosloDoPromjene())
-            {
-                e.Cancel = true;
-                switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
-                {
-                    case DialogResult.Yes:
-                        if (!spremiPromjene()) return;
-                        else e.Cancel = false;
-                        break;
-                    case DialogResult.No:
-                        e.Cancel = false;
-                        break;
-                }
-            }
-        }
-
         /// <summary>
-        /// Funkcija uspoređuje prethodne vrijednosti i nove vrijednosti polja kako bi dosla do zakljucka imali promjena u unosu.
+        /// Funkcija uspoređuje prethodne vrijednosti i nove vrijednosti polja kako bi dosla do zakljucka imali promjena u unosu
         /// </summary>
-        /// <returns>true ako ima promjena, false ako nema</returns>
+        /// <returns>True ako ima promjena, False ako nema</returns>
         private bool dosloDoPromjene()
         {
-            if (zaposlenik == null && (txtIme.Text != "" || txtPrezime.Text != "")) return true;
-            if (txtIme.Tag != null && txtPrezime.Tag != null && txtEmail.Tag != null && txtBrojTelefona.Tag != null && txtAdresa.Tag != null)
+            try
             {
-                if (!String.Equals(txtIme.Text.ToString(), txtIme.Tag.ToString())) return true;
-                if (!String.Equals(txtPrezime.Text.ToString(), txtPrezime.Tag.ToString())) return true;
-                if (!String.Equals(txtEmail.Text.ToString(), txtEmail.Tag.ToString())) return true;
-                if (!String.Equals(txtBrojTelefona.Text.ToString(), txtBrojTelefona.Tag.ToString())) return true;
-                if (!String.Equals(txtAdresa.Text.ToString(), txtAdresa.Tag.ToString())) return true;
+                if ((novi || samoUnosIzmjena) && zaposlenik == null && (txtIme.Text != "" || txtPrezime.Text != "")) return true;
+                if (!novi && txtIme.Tag != null && txtPrezime.Tag != null && txtEmail.Tag != null && txtBrojTelefona.Tag != null && txtAdresa.Tag != null)
+                {
+                    if (!String.Equals(txtIme.Text.ToString(), txtIme.Tag.ToString())) return true;
+                    if (!String.Equals(txtPrezime.Text.ToString(), txtPrezime.Tag.ToString())) return true;
+                    if (!String.Equals(txtEmail.Text.ToString(), txtEmail.Tag.ToString())) return true;
+                    if (!String.Equals(txtBrojTelefona.Text.ToString(), txtBrojTelefona.Tag.ToString())) return true;
+                    if (!String.Equals(txtAdresa.Text.ToString(), txtAdresa.Tag.ToString())) return true;
+                }
+            }
+            catch (Exception)
+            {
+                //throw;
             }
             return false;
         }
@@ -194,7 +143,7 @@ namespace Skladiste_PI
         /// <summary>
         /// Provjera unosa u polja
         /// </summary>
-        /// <returns>True ako je unos ispravan, false ako nije.</returns>
+        /// <returns>True ako je unos ispravan, False ako nije</returns>
         private bool provjeriUnos()
         {
             if (txtIme.Text == "")
@@ -217,73 +166,49 @@ namespace Skladiste_PI
         /// </summary>
         private bool spremiPromjene()
         {
-            // Provjera ispravnog unosa podataka
-            if (!provjeriUnos()) return false;
-
-            // Nema promjene nema spremanja!
-            if (!dosloDoPromjene())
+            try
             {
-                if (samoUnosIzmjena) this.Close();
+                // Provjera ispravnog unosa podataka
+                if (!provjeriUnos()) return false;
+
+                // Nema promjene -> nema spremanja!
+                if (!dosloDoPromjene())
+                    if (samoUnosIzmjena) this.Close();
+                    else return false;
+
+                // Spremanje u bazu, ažuriranje DataGrida
+                if (zaposlenik == null) zaposlenik = new Zaposlenik();
+
+                txtIme.Tag = zaposlenik.Ime = txtIme.Text;
+                txtPrezime.Tag = zaposlenik.Prezime = txtPrezime.Text;
+                txtEmail.Tag = zaposlenik.Email = txtEmail.Text;
+                txtBrojTelefona.Tag = zaposlenik.BrojTelefona = txtBrojTelefona.Text;
+                txtAdresa.Tag = zaposlenik.Adresa = txtAdresa.Text;
+
+                zaposlenik.Spremi();
+
+                // Ažuriranje DataGrida
+                if (novi) dohvatiPodatke();
+                else if (!samoUnosIzmjena) dgvPodaci.SelectedRows[0].Cells["colImePrezime"].Value = zaposlenik.ToString();
+                dgvPodaci.Refresh();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Greška pri spremanju!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
-
-            // Spremanje u bazu, ažuriranje DataGrida
-            if (zaposlenik == null)
-            {
-                zaposlenik = new Zaposlenik();
-                //dgvPodaci.Rows.Add(45, txtIme.Text + " " + txtPrezime.Text);
-            }
-            //else dgvPodaci.CurrentRow.Cells[1].Value = txtIme.Text + " " + txtPrezime.Text;
-            dgvPodaci.Refresh();
-
-            zaposlenik.Ime = txtIme.Text;
-            zaposlenik.Prezime = txtPrezime.Text;
-            zaposlenik.Email = txtEmail.Text;
-            zaposlenik.BrojTelefona = txtBrojTelefona.Text;
-            zaposlenik.Adresa = txtAdresa.Text;
-
-            zaposlenik.Spremi();
-
-            // Promjena u formi
-            txtIme.Tag = txtIme.Text;
-            txtPrezime.Tag = txtPrezime.Text;
-            txtEmail.Tag = txtEmail.Text;
-            txtBrojTelefona.Tag = txtBrojTelefona.Text;
-            txtAdresa.Tag = txtAdresa.Text;
-
-            // Spremanje u bazu, ažuriranje DataGrida
-            if (zaposlenik == null)
-            {
-                dgvPodaci.Rows.Add(45,txtIme.Text + " " + txtPrezime.Text);
-                dgvPodaci.Refresh();
-            }
-            else
-            {
-                // DataRow redak;??? 
-                //redak = Dataset.!!!.Tables("xy....Korisnici").Rows.Find(....??txtKorIme.Text)
-                //if (redak !=null) {
-                //    redak("korisnicko_ime") = txtKorIme.Text
-              //  dgvPodaci.CurrentRow.Cells[1].Value = txtKorIme.Text;
-                ///}
-                //else
-                //  MessageBox.Show("Došlo je do greške prilikom pronalaženja reda u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-
-            }
-
-            return true;
         }
 
         /// <summary>
-        /// Dohvaća podatke iz baze o pojedinom korisniku.
+        /// Dohvaća podatke iz baze o pojedinom zaposleniku i puni textBoxe
         /// </summary>
         private void dohvatiZaposlenika()
         {
             if (zaposlenik != null)
             {
-                this.Text = "Izmjena zaposlenika: " + zaposlenik.Ime + " " + zaposlenik.Prezime;
+                this.Text = "Izmjena zaposlenika: " + zaposlenik.ToString();
                 txtIme.Tag = txtIme.Text = zaposlenik.Ime;
                 txtPrezime.Tag = txtPrezime.Text = zaposlenik.Prezime;
                 txtEmail.Tag = txtEmail.Text = zaposlenik.Email;
@@ -297,16 +222,19 @@ namespace Skladiste_PI
         /// </summary>
         private void dohvatiPodatke()
         {
+            dgvPodaci.Rows.Clear();
             List<Zaposlenik> listaZaposlenika = Zaposlenik.DohvatiZaposlenike();
-            dgvPodaci.DataSource = listaZaposlenika;
-            oznaciPrviRed();
+            foreach(Zaposlenik z in listaZaposlenika){
+                dgvPodaci.Rows.Add(z.idZaposlenika,z.ToString());
+            }
+            if (dgvPodaci.RowCount<=0) btnDodaj_Click(null,null);
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
             if (txtFilter.TextLength > 0)
                 foreach (DataGridViewRow red in dgvPodaci.Rows)
-                    if (red.Cells["Ime"].Value.ToString().StartsWith(txtFilter.Text, StringComparison.CurrentCultureIgnoreCase))
+                    if (red.Cells["colImePrezime"].Value.ToString().StartsWith(txtFilter.Text, StringComparison.CurrentCultureIgnoreCase))
                         red.Visible = true;
                     else red.Visible = false;
             else
@@ -315,11 +243,29 @@ namespace Skladiste_PI
 
         private void dgvPodaci_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvPodaci.Rows.Count > 0 && dgvPodaci.DisplayedRowCount(false) > 0)
+            try
             {
-                zaposlenik = dgvPodaci.SelectedRows[0].DataBoundItem as Zaposlenik;
-                dohvatiZaposlenika();
+                if (dgvPodaci.Rows.Count > 0 && dgvPodaci.DisplayedRowCount(false) > 0)
+                {
+                    zaposlenik = Zaposlenik.DohvatiZaposlenikaPremaID(dgvPodaci.SelectedRows[0].Cells["id"].Value.ToString());
+                    dohvatiZaposlenika();
+                }
             }
+            catch (Exception)
+            {
+               // throw;
+            }
+        }
+
+        private void dgvPodaci_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (dosloDoPromjene())
+                switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    case DialogResult.Yes:
+                        spremiPromjene();
+                        break;
+                }
         }
 
         /// <summary>
@@ -358,10 +304,94 @@ namespace Skladiste_PI
         {
             if (!spremiPromjene()) return;
             if (samoUnosIzmjena) this.Close();
+            novi = false;
+            txtFilter.Text = "";
             promjenaUnosIzmjena();
         }
 
+        /// <summary>
+        /// Pokreće dretvu za provjeru unosa
+        /// </summary>
+        private void PokreniDretvuProvjeraUnosa()
+        {
+            btnObrisi.Enabled = false;
+            bwPromjenaUnosa.RunWorkerAsync(0);
+        }
 
+        /// <summary>
+        /// Zaustavlja dretvu za provjeru unosa
+        /// </summary>
+        private void ZaustaviDretvuProvjeraUnosa()
+        {
+            ZaustaviDretvu = true;
+        }
+
+        private void bwPromjenaUnosa_DoWork(object sender, DoWorkEventArgs e)
+        {
+            int tip = int.Parse(e.Argument.ToString());
+            if (tip == 1)
+                while (!ZaustaviDretvu)
+                {
+                    if (!dosloDoPromjene()) break;
+                }
+            else
+                while (!ZaustaviDretvu)
+                {
+                    if (dosloDoPromjene()) break;
+                }
+        }
+
+        private void bwPromjenaUnosa_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            btnObrisi.Enabled = true;
+            if (!ZaustaviDretvu)
+                if (dosloDoPromjene()) bwPromjenaUnosa.RunWorkerAsync(1);
+                else PokreniDretvuProvjeraUnosa();
+        }
+
+        private void frmUnosZaposlenika_Leave(object sender, EventArgs e)
+        {
+            ZaustaviDretvuProvjeraUnosa();
+        }
+
+        private void frmUnosZaposlenika_Activated(object sender, EventArgs e)
+        {
+            ZaustaviDretvu = false;
+            if (dosloDoPromjene()) bwPromjenaUnosa.RunWorkerAsync(1);
+            else PokreniDretvuProvjeraUnosa();
+        }
+
+        private void frmUnosZaposlenika_Load(object sender, EventArgs e)
+        {
+            if (!samoUnosIzmjena) dohvatiPodatke();
+        }
+
+        private void frmUnosZaposlenika_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (dosloDoPromjene())
+                    switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
+                    {
+                        case DialogResult.Yes:
+                            if (!spremiPromjene()) e.Cancel = true;
+                            break;
+                        case DialogResult.Cancel:
+                            e.Cancel = true;
+                            break;
+                    }
+                if (!e.Cancel)
+                {
+                    // Triba zbog FixedSingla kod paljenja iz Pregleda; ne handla FormLeave
+                    ZaustaviDretvuProvjeraUnosa();
+                }
+            }
+            catch (Exception)
+            {
+                // U slučaju greške prilikom gašenja forme zaustavlja dretvu
+                ZaustaviDretvuProvjeraUnosa();
+            }
+        }
 
     }
 }

@@ -11,8 +11,6 @@ using System.Windows.Forms;
 namespace Skladiste_PI
 {
 
-
-
     public partial class frmGlavna : Form
     {
         public frmGlavna()
@@ -46,21 +44,22 @@ namespace Skladiste_PI
         }
 
         /// <summary>
-        /// Postavlja status/tekst na glavnoj formi.
+        /// Postavlja status/tekst na glavnoj formi
         /// </summary>
-        /// <param name="tekst">Tekst za ispis.</param>
-        /// <param name="slika">0-pricekaj,1-logiran,2-logiranAdmin</param>
-        public void PostaviStatusTekst(string tekst, byte slika)
+        /// <param name="tekst">Tekst za ispis</param>
+        /// <param name="tip">Vrsta login-a</param>
+        public void PostaviStatusTekst(string tekst, TipLogin tip)
         {
             logiranAdmin(false);
-            switch (slika){
-                case 0: // pricekaj
+            switch (tip)
+            {
+                case TipLogin.NijeLogiran: // pricekaj
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.refresh;
                     break;
-                case 1: // logiran korisnik
+                case TipLogin.Korisnik: // logiran korisnik
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.korisnik;
                     break;
-                case 2: // logiran admin
+                case TipLogin.Admin: // logiran admin
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.admin;
                     logiranAdmin(true);
                     break;
@@ -87,8 +86,8 @@ namespace Skladiste_PI
         /// </summary>
         /// <param name="forma">Naziv forme za pokrenuti.</param>
         public void pokreniFormu(Form forma){
-            forma.MdiParent = this;
-            forma.Show();
+                forma.MdiParent = this;
+                forma.Show();
         }
 
         private void mnuDatotekaIspis_Click(object sender, EventArgs e)
@@ -96,9 +95,9 @@ namespace Skladiste_PI
             pokreniFormu(new frmIspis());
         }
 
-        private void mnuDokumentiPregledPrijemnica_Click(object sender, EventArgs e)
+        private void mnuDokumentiPregledPrijamnica_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmPregledPrijemnice());
+            pokreniFormu(new frmPregledPrijamnice());
         }
 
         private void mnuAdministracijaKupciUnos_Click(object sender, EventArgs e)
@@ -113,7 +112,7 @@ namespace Skladiste_PI
 
         private void mnuDokumentiGeneriranjeNarudzbenice_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmGeneriraneNarudzbenice());
+            pokreniFormu(new frmGeneriraneNarudzbenice(this));
         }
 
         private void mnuAdministracijaDobavljaciUnos_Click(object sender, EventArgs e)
@@ -151,9 +150,9 @@ namespace Skladiste_PI
             pokreniFormu(new frmPregledZaposlenika());
         }
 
-        private void mnuDokumentiUnosPrijemnica_Click(object sender, EventArgs e)
+        private void mnuDokumentiUnosPrijamnica_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmUnosPrijemnice());
+            pokreniFormu(new frmUnosPrijamnice());
         }
 
         private void mnuDatotekaOdjava_Click(object sender, EventArgs e)
@@ -165,7 +164,7 @@ namespace Skladiste_PI
         }
         private void mnuAdministracijaSkladiste_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmSkladiste());
+            pokreniFormu(new frmPregledArtikla(true));
         }
 
         private void mnuDokumentiUnosOtpremnica_Click(object sender, EventArgs e)
@@ -180,7 +179,15 @@ namespace Skladiste_PI
 
         private void mnuPomocDokumentacija_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Uskoro...", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string dat = "dokumentacija.pdf";
+            try
+            {
+                System.Diagnostics.Process.Start(dat);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("U izradi...", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
 
@@ -203,7 +210,8 @@ namespace Skladiste_PI
         private void mnuProzoriZatvoriSve_Click(object sender, EventArgs e)
         {
             foreach (Form ChildForm in this.MdiChildren){
-	            ChildForm.Dispose();
+                ChildForm.Focus();
+	            ChildForm.Close();
 	        }
         }
 
@@ -258,34 +266,34 @@ namespace Skladiste_PI
             mnuProzoriZatvoriSve_Click(null,null);
         }
 
-        private void mnuDokumentiIspisPrijemnica_Click(object sender, EventArgs e)
+        private void mnuDokumentiIspisPrijamnica_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(0));
+            pokreniFormu(new frmIspis(TipIspis.Prijamnice));
         }
 
         private void mnuDokumentiIspisOtpremnica_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(1));
+            pokreniFormu(new frmIspis(TipIspis.Otpremnice));
         }
 
         private void mnuArtikliIspis_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(2));
+            pokreniFormu(new frmIspis(TipIspis.Artikli));
         }
 
         private void mnuAdministracijaKupciIspis_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(3));
+            pokreniFormu(new frmIspis(TipIspis.Kupci));
         }
 
         private void mnuAdministracijaDobavljaciIspis_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(4));
+            pokreniFormu(new frmIspis(TipIspis.Dobavljači));
         }
 
         private void mnuAdministracijaZaposleniciIspis_Click(object sender, EventArgs e)
         {
-            pokreniFormu(new frmIspis(5));
+            pokreniFormu(new frmIspis(TipIspis.Zaposlenici));
         }
 
 

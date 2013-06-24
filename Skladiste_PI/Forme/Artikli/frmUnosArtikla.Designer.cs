@@ -28,90 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUnesi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnosArtikla));
+            this.btnSpremi = new System.Windows.Forms.Button();
+            this.lblNaziv = new System.Windows.Forms.Label();
+            this.lblCijena = new System.Windows.Forms.Label();
+            this.lblAlarmKol = new System.Windows.Forms.Label();
+            this.txtNaziv = new System.Windows.Forms.TextBox();
+            this.txtAlarmKol = new System.Windows.Forms.TextBox();
+            this.txtCijena = new System.Windows.Forms.TextBox();
             this.btnZatvori = new System.Windows.Forms.Button();
+            this.cbKategorija = new System.Windows.Forms.ComboBox();
+            this.lblKategorija = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnUnesi
+            // btnSpremi
             // 
-            this.btnUnesi.Location = new System.Drawing.Point(154, 180);
-            this.btnUnesi.Name = "btnUnesi";
-            this.btnUnesi.Size = new System.Drawing.Size(75, 23);
-            this.btnUnesi.TabIndex = 0;
-            this.btnUnesi.Text = "Unesi";
-            this.btnUnesi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Location = new System.Drawing.Point(154, 180);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnSpremi.TabIndex = 0;
+            this.btnSpremi.Text = "&Spremi";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
-            // label1
+            // lblNaziv
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Naziv";
+            this.lblNaziv.AutoSize = true;
+            this.lblNaziv.Location = new System.Drawing.Point(34, 37);
+            this.lblNaziv.Name = "lblNaziv";
+            this.lblNaziv.Size = new System.Drawing.Size(34, 13);
+            this.lblNaziv.TabIndex = 1;
+            this.lblNaziv.Text = "Naziv";
             // 
-            // label2
+            // lblCijena
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cijeja prodaje";
+            this.lblCijena.AutoSize = true;
+            this.lblCijena.Location = new System.Drawing.Point(34, 127);
+            this.lblCijena.Name = "lblCijena";
+            this.lblCijena.Size = new System.Drawing.Size(74, 13);
+            this.lblCijena.TabIndex = 2;
+            this.lblCijena.Text = "Cijena prodaje";
             // 
-            // label3
+            // lblAlarmKol
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Kolicina";
+            this.lblAlarmKol.AutoSize = true;
+            this.lblAlarmKol.Location = new System.Drawing.Point(34, 95);
+            this.lblAlarmKol.Name = "lblAlarmKol";
+            this.lblAlarmKol.Size = new System.Drawing.Size(84, 13);
+            this.lblAlarmKol.TabIndex = 4;
+            this.lblAlarmKol.Text = "Alarmna količina";
             // 
-            // label4
+            // txtNaziv
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Kategorija";
+            this.txtNaziv.Location = new System.Drawing.Point(145, 34);
+            this.txtNaziv.Name = "txtNaziv";
+            this.txtNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtNaziv.TabIndex = 5;
             // 
-            // textBox1
+            // txtAlarmKol
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtAlarmKol.Location = new System.Drawing.Point(145, 92);
+            this.txtAlarmKol.Name = "txtAlarmKol";
+            this.txtAlarmKol.Size = new System.Drawing.Size(100, 20);
+            this.txtAlarmKol.TabIndex = 6;
             // 
-            // textBox2
+            // txtCijena
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(145, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(145, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtCijena.Location = new System.Drawing.Point(145, 124);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.Size = new System.Drawing.Size(100, 20);
+            this.txtCijena.TabIndex = 8;
             // 
             // btnZatvori
             // 
@@ -125,25 +111,44 @@
             this.btnZatvori.UseVisualStyleBackColor = true;
             this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
+            // cbKategorija
+            // 
+            this.cbKategorija.FormattingEnabled = true;
+            this.cbKategorija.Location = new System.Drawing.Point(312, 65);
+            this.cbKategorija.Name = "cbKategorija";
+            this.cbKategorija.Size = new System.Drawing.Size(188, 21);
+            this.cbKategorija.TabIndex = 10;
+            // 
+            // lblKategorija
+            // 
+            this.lblKategorija.AutoSize = true;
+            this.lblKategorija.Location = new System.Drawing.Point(309, 37);
+            this.lblKategorija.Name = "lblKategorija";
+            this.lblKategorija.Size = new System.Drawing.Size(191, 13);
+            this.lblKategorija.TabIndex = 11;
+            this.lblKategorija.Text = "ODABERITE KATEGORIJU ARTIKLA:";
+            // 
             // frmUnosArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnZatvori;
             this.ClientSize = new System.Drawing.Size(584, 362);
+            this.Controls.Add(this.lblKategorija);
+            this.Controls.Add(this.cbKategorija);
             this.Controls.Add(this.btnZatvori);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUnesi);
+            this.Controls.Add(this.txtCijena);
+            this.Controls.Add(this.txtAlarmKol);
+            this.Controls.Add(this.txtNaziv);
+            this.Controls.Add(this.lblAlarmKol);
+            this.Controls.Add(this.lblCijena);
+            this.Controls.Add(this.lblNaziv);
+            this.Controls.Add(this.btnSpremi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "frmUnosArtikla";
             this.Text = "Unos artikla";
+            this.Load += new System.EventHandler(this.frmUnosArtikla_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,15 +156,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnUnesi;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnSpremi;
+        private System.Windows.Forms.Label lblNaziv;
+        private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.Label lblAlarmKol;
+        private System.Windows.Forms.TextBox txtNaziv;
+        private System.Windows.Forms.TextBox txtAlarmKol;
+        private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.Button btnZatvori;
+        private System.Windows.Forms.ComboBox cbKategorija;
+        private System.Windows.Forms.Label lblKategorija;
     }
 }

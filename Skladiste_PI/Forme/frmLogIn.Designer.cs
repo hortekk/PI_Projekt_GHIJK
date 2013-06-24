@@ -36,6 +36,7 @@
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pbSlika = new System.Windows.Forms.PictureBox();
+            this.bwPodaciLoad = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlika)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +114,12 @@
             this.pbSlika.TabIndex = 4;
             this.pbSlika.TabStop = false;
             // 
+            // bwPodaciLoad
+            // 
+            this.bwPodaciLoad.WorkerSupportsCancellation = true;
+            this.bwPodaciLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwPodaciLoad_DoWork);
+            this.bwPodaciLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwPodaciLoad_RunWorkerCompleted);
+            // 
             // frmLogIn
             // 
             this.AcceptButton = this.btnPrijava;
@@ -156,5 +163,6 @@
         private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.PictureBox pbSlika;
+        private System.ComponentModel.BackgroundWorker bwPodaciLoad;
     }
 }

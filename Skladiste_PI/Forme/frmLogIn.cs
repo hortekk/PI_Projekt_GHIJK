@@ -1,105 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baza;
 
 namespace Skladiste_PI
 {
+    public enum TipLogin { NijeLogiran = 0, Korisnik = 1, Admin = 2 }
     public partial class frmLogIn : Form
     {
-        private byte logiranKorisnik = 0;
+        private TipLogin logiranKorisnik = TipLogin.NijeLogiran;
+        private bool ucitaniPodaci = false;
         private frmGlavna mainForm = null;
+        List<Administrator> listaAdm;
 
 
         public frmLogIn(frmGlavna callingForm)
         {
-            mainForm = callingForm as frmGlavna; 
+            mainForm = callingForm as frmGlavna;
             InitializeComponent();
-
         }
 
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
-
-            logiranKorisnik = ProvjeriKorisnika(txtKorIme.Text, txtLozinka.Text);
-
-            if (logiranKorisnik==1){
-                // Provjera uspjesna - logiran korisnik
-                this.mainForm.PostaviStatusTekst("Korisnik: " + txtKorIme.Text + ", prijavljen " + DateTime.Now.ToString(), 1);
-                this.Close();
-            }
-            else if (logiranKorisnik==2)
+            try
             {
-                // Provjera uspjesna - logiran admin
-                this.mainForm.PostaviStatusTekst("Administrator: " + txtKorIme.Text + ", prijavljen " + DateTime.Now.ToString(), 2);
-                this.Close();
+                // Čekamo 2. dretvu da učita podatke u listu
+                while (!ucitaniPodaci) { }
+                // Prolaz kroz listu i provjera autorizacije
+                foreach (Administrator adm in listaAdm)
+                {
+                    if (adm.KorisnickoIme == txtKorIme.Text && Administrator.Provjeri(txtLozinka.Text, adm.Lozinka))
+                    {
+                        if (adm.Admin) logiranKorisnik = TipLogin.Admin; // Provjera uspjesna - logiran admin
+                        else logiranKorisnik = TipLogin.Korisnik; // Provjera uspjesna - logiran korisnik
+
+                        Zaposlenik zap = Zaposlenik.DohvatiZaposlenikaPremaID(adm.idZaposlenika.ToString());
+
+                        this.mainForm.PostaviStatusTekst((logiranKorisnik == TipLogin.Korisnik ? "Korisnik: " : "Administrator: ") + zap.ToString() + ", prijavljen " + DateTime.Now.ToString(), logiranKorisnik);
+                        break;
+                    }
+                }
             }
-            else
+            catch (Exception)
             {
-                // Provjera neuspjesna
-                MessageBox.Show("Unijeli ste pogrešno korisničko ime ili lozinku!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtLozinka.Text = txtKorIme.Text = "";
-                txtKorIme.Focus();
+                // trow;
             }
-        }
+            txtLozinka.Text = txtKorIme.Text = "";
+            txtKorIme.Focus();
 
-        /// <summary>
-        /// Provjera unesenih podataka za logiranje.
-        /// </summary>
-        /// <param name="kIme">Korisnicko ime</param>
-        /// <param name="lozinka">Lozinka</param>
-        /// <returns>0-nije logiran,1-logiran korisnik,2-logiran admin</returns>
-        private byte ProvjeriKorisnika(string kIme, string lozinka)
-        {
-            byte logiran = 0;
-
-
-            // Dohvati podatke
-            
-            // Proba
-            if (lozinka == "ž")  //kIme == "ž" && 
-            {
-                logiran = 1;
-            }
-            else if (lozinka == "admin")
-            {
-                logiran = 2;
-            }
-
-            return logiran;
+            if (logiranKorisnik == TipLogin.NijeLogiran) MessageBox.Show("Unijeli ste pogrešno korisničko ime ili lozinku!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else this.Close();
         }
 
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
-            // Izlaz iz aplikacije
-            frmLogIn_FormClosing(sender, null);
+            this.Close();
         }
 
         private void frmLogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (logiranKorisnik == 0)
-            {
-                Application.Exit();
-            }
-
+            if (logiranKorisnik == TipLogin.NijeLogiran) Application.Exit();
         }
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-            logiranKorisnik = 0;
-            this.mainForm.PostaviStatusTekst("Inicijalizacija...",0);
+            bwPodaciLoad.RunWorkerAsync();
 
-
-            // Proba
-            txtKorIme.Text = "ž";
-            txtLozinka.Text = "admin";
+            logiranKorisnik = TipLogin.NijeLogiran;
+            this.mainForm.PostaviStatusTekst("Inicijalizacija...", logiranKorisnik);
 
         }
+
+        private void bwPodaciLoad_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            try
+            {
+                if (!ucitaniPodaci) listaAdm = Administrator.DohvatiAdministratore();
+            }
+            catch (Exception)
+            {
+               // throw;
+            }
+        }
+
+        private void bwPodaciLoad_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            ucitaniPodaci = true;
+        }
+
     }
 }

@@ -1,0 +1,5 @@
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\bin\Debug\Funkcije.dll
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\bin\Debug\Funkcije.pdb
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.dll
+D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.pdb

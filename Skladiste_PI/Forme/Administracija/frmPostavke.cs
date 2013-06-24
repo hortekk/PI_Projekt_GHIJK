@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baza;
+using Funkcije;
 
 namespace Skladiste_PI
 {
     public partial class frmPostavke : Form
     {
-        private bool noviKorisnik = false;
+        private Administrator korisnik = null;
+        List<Administrator> listaKorisnika = Administrator.DohvatiAdministratore();
 
         public frmPostavke()
         {
@@ -25,25 +28,42 @@ namespace Skladiste_PI
         }
 
         /// <summary>
-        /// Funkcija uspoređuje prethodne vrijednosti i nove vrijednosti polja kako bi dosla do zakljucka imali promjena u unosu.
+        /// Funkcija uspoređuje prethodne vrijednosti i nove vrijednosti polja kako bi dosla do zakljucka imali promjena u unosu
         /// </summary>
-        /// <returns>true ako ima promjena, false ako nema.</returns>
+        /// <returns>True ako ima promjena, False ako nema</returns>
         private bool dosloDoPromjene()
         {
-            if (noviKorisnik) return true;
-            if (txtKorIme.Tag != null && txtLozinka.Tag != null)
+            try
             {
-                if (!String.Equals(txtKorIme.Text.ToString(), txtKorIme.Tag.ToString())) return true;
-                if (!String.Equals(txtLozinka.Text.ToString(), txtLozinka.Tag.ToString())) return true;
+                if (txtLozinka.Tag != null && txtLozinka.Text != "") return true;
+                if (txtKorIme.Tag != null)
+                    if (!String.Equals(txtKorIme.Text.ToString(), txtKorIme.Tag.ToString())) return true;
             }
-            // dodat za admina
+            catch (Exception)
+            {
+                //throw;
+            }
             return false;
         }
 
+        private bool provjeriPostojanostKorisnika()
+        {
+            // Provjeri jel postoji korisnicko ime u DataGridu - bazi
+            foreach (Administrator adm in listaKorisnika)
+                if (String.Equals(adm.KorisnickoIme, txtKorIme.Text) && !String.Equals(adm.idZaposlenika.ToString(), dgvPodaci.SelectedRows[0].Cells["id"].Value.ToString()))
+                {
+                    MessageBox.Show("Uneseno korisničko ime već postoji u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtKorIme.Text = "";
+                    txtKorIme.Focus();
+                    return false;
+                }
+            return true;
+        }
+
         /// <summary>
-        /// Provjera unosa u polja.
+        /// Provjera unosa u polja
         /// </summary>
-        /// <returns>True ako je unos ispravan, false ako nije.</returns>
+        /// <returns>True ako je unos ispravan, False ako nije</returns>
         private bool provjeriUnos()
         {
             if (txtKorIme.Text == "")
@@ -52,377 +72,211 @@ namespace Skladiste_PI
                 txtKorIme.Focus();
                 return false;
             }
-            // Provjeri jel postoji korisnicko ime u DataGridu - bazi
-            for (int index = 0; index < dgvPodaci.RowCount; index++)
-                if (String.Equals(dgvPodaci.Rows[index].Cells[0].Value.ToString(), txtKorIme.Text.ToString()) && index != dgvPodaci.CurrentRow.Index)
-                {
-                    MessageBox.Show("Uneseno korisničko ime već postoji u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtKorIme.Text = "";
-                    txtKorIme.Focus();
-                    return false;
-                }
-            if (txtLozinka.Text == "")
+            if (txtLozinka.Tag==null && txtLozinka.Text == "")
             {
                 MessageBox.Show("Unesite lozinku!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLozinka.Text = "";
                 txtLozinka.Focus();
                 return false;
             }
-            return true;
+            return provjeriPostojanostKorisnika();
         }
 
         /// <summary>
-        /// Spremanje promjena u bazu podataka.
+        /// Spremanje promjena u bazu podataka
         /// </summary>
         private bool spremiPromjene()
         {
-            // Provjera ispravnog unosa podataka
-            if (!provjeriUnos()) return false;
-
-            if (cbAdmin.Checked == true && lblStatus.Text != "Autoriziran" && !provjeriAdmina()) return false;
-            
-            // Nema promjene nema spremanja!
-            if (!dosloDoPromjene()) return false;
-
-            // Promjena u formi
-            txtLozinka.Tag = txtLozinka.Text;
-            txtKorIme.Tag = txtKorIme.Text;
-            cbAdmin.Tag = cbAdmin.Checked.ToString();
-
-            // Spremanje u bazu, ažuriranje DataGrida
-            if (noviKorisnik)
+            try
             {
-                //Dataset!!!.Rows.Add(def..., txtKorIme.Text)
-                dgvPodaci.Rows.Add(txtKorIme.Text);
-                dgvPodaci.Refresh();
+                // Provjera ispravnog unosa podataka
+                if (!provjeriUnos()) return false;
+
+                if (lblStatus.Text == "Netočno" || (txtLozinka.Text!="" && lblStatus.Text == ""))
+                {
+                    MessageBox.Show("Lozinke nisu iste, molimo ponovite unos!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtLozinka2.Text = "";
+                    txtLozinka2.Focus();
+                    return false;
+                }
+                // Nema promjene -> nema spremanja!
+                if (txtKorIme.Tag != null && txtLozinka.Text=="" && cbAdmin.Checked==(bool)cbAdmin.Tag)
+                    if (String.Equals(txtKorIme.Text.ToString(), txtKorIme.Tag.ToString())) return true;
+
+                // Spremanje u bazu, ažuriranje DataGrida
+                if (korisnik == null)
+                {
+                    korisnik = new Administrator();
+                }
+
+                txtKorIme.Tag = korisnik.KorisnickoIme = txtKorIme.Text;
+                cbAdmin.Tag = korisnik.Admin = cbAdmin.Checked;
+                if (txtLozinka.Text != "") txtLozinka.Tag = korisnik.Lozinka = Metoda.Kodiraj(txtLozinka.Text);
+                korisnik.idZaposlenika = int.Parse(dgvPodaci.SelectedRows[0].Cells["id"].Value.ToString());
+
+                korisnik.Spremi();
+
+                listaKorisnika = Administrator.DohvatiAdministratore();
+
+                return true;
             }
-            else
+            catch (Exception)
             {
-                // DataRow redak;??? 
-                //redak = Dataset.!!!.Tables("xy....Korisnici").Rows.Find(....??txtKorIme.Text)
-            //if (redak !=null) {
-                //    redak("korisnicko_ime") = txtKorIme.Text
-                dgvPodaci.CurrentRow.Cells[0].Value = txtKorIme.Text;
-                ///}
-            //else
-             //  MessageBox.Show("Došlo je do greške prilikom pronalaženja reda u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-
+                MessageBox.Show("Greška pri spremanju!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
-
-            return true;
         }
 
         /// <summary>
-        /// Dohvaća podatke iz baze o pojedinom korisniku.
+        /// Dohvaća podatke iz baze o pojedinom korisniku i puni textBoxe
         /// </summary>
         private void dohvatiKorisnika()
         {
-
-            // dohvati podatke iz baze prema korisničkom imenu i popunis textbox-ove
-
+            if (korisnik != null)
+            {
+                txtKorIme.Tag = txtKorIme.Text = korisnik.KorisnickoIme;
+                txtLozinka.Tag = korisnik.Lozinka;
+                txtLozinka.Text = txtLozinka2.Text = "";
+                cbAdmin.Tag = cbAdmin.Checked = korisnik.Admin;
+            }
         }
-       
+
         /// <summary>
-        /// Dohvaća podatke iz baze.
+        /// Dohvaća podatke iz baze i puni DataGrid
         /// </summary>
         private void dohvatiPodatke()
         {
-
-            // popuni DataGrid s podacima
-
-            
-            oznaciPrviRed();
+            dgvPodaci.Rows.Clear();
+            List<Zaposlenik> listaZaposlenika = Zaposlenik.DohvatiZaposlenike();
+            foreach (Zaposlenik z in listaZaposlenika)
+            {
+                dgvPodaci.Rows.Add(z.idZaposlenika, z.ToString());
+            }
+            if (dgvPodaci.RowCount <= 0)
+            {
+                MessageBox.Show("Nema unesenih zaposlenika!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Dispose();
+            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
-            if (txtFilter.TextLength>0)
-                for (int index=0;index<dgvPodaci.RowCount;index++){
-                    if (dgvPodaci.Rows[index].Cells[0].Value.ToString().ToLower().StartsWith(txtFilter.Text.ToLower()))
-                        dgvPodaci.Rows[index].Visible = true;
-                    else
-                        dgvPodaci.Rows[index].Visible = false;
-                }
-            else 
-                for (int index=0;index<dgvPodaci.RowCount;index++)
-                    dgvPodaci.Rows[index].Visible = true;
+            if (txtFilter.TextLength > 0)
+                foreach (DataGridViewRow red in dgvPodaci.Rows)
+                    if (red.Cells["colImePrezime"].Value.ToString().StartsWith(txtFilter.Text, StringComparison.CurrentCultureIgnoreCase))
+                        red.Visible = true;
+                    else red.Visible = false;
+            else
+                foreach (DataGridViewRow red in dgvPodaci.Rows) red.Visible = true;
         }
 
-        private void frmPostavke_Load(object sender, EventArgs e)
+        private void dgvPodaci_SelectionChanged(object sender, EventArgs e)
         {
-            dohvatiPodatke();
+            try
+            {
+                if (dgvPodaci.Rows.Count > 0 && dgvPodaci.DisplayedRowCount(false) > 0)
+                {
+                    korisnik = Administrator.DohvatiPremaIDZaposlenika(dgvPodaci.SelectedRows[0].Cells["id"].Value.ToString());
+                    dohvatiKorisnika();
+                }
+            }
+            catch (Exception)
+            {
+                korisnik = null;
+                txtLozinka.Text = txtLozinka2.Text = txtKorIme.Text = "";
+                cbAdmin.Tag = txtKorIme.Tag = txtLozinka.Tag = null;
+                cbAdmin.Checked = false;
+            }
+        }
 
+        private void dgvPodaci_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (dosloDoPromjene())
+                switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    case DialogResult.Yes:
+                        spremiPromjene();
+                        break;
+                }
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (korisnik == null)
+            {
+                dgvPodaci_SelectionChanged(null, null);
+                return;
+            }
+
+            // Brisanje korisnika
+            if (dgvPodaci.SelectedRows.Count > 0)
+            {
+                switch (MessageBox.Show("Jeste li sigurni da želite ukloniti prava pristupa označenom korisniku?", "Upit...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    case DialogResult.No:
+                        return;
+                }
+                korisnik.Obrisi();
+                dgvPodaci.Rows[0].Selected = true;
+                txtFilter.Text = "";
+            }
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             if (!spremiPromjene()) return;
-            noviKorisnik = false;
-            promjenaUnosIzmjena();
+            korisnik = null;
+            txtLozinka.Text = txtLozinka2.Text = txtFilter.Text = "";
         }
 
-        private void dgvPodaci_SelectionChanged(object sender, EventArgs e)
+        private void promjeniStatus()
         {
-            if (!noviKorisnik && dgvPodaci.Rows.Count > 0 && dgvPodaci.DisplayedRowCount(false) > 0) dohvatiKorisnika();
+            if (txtLozinka2.Text != "" && txtLozinka.Text == txtLozinka2.Text)
+            {
+                lblStatus.ForeColor = System.Drawing.Color.Green;
+                lblStatus.Text = "Točno";
+            }
+            else
+            {
+                lblStatus.ForeColor = System.Drawing.Color.DarkRed;
+                lblStatus.Text = txtLozinka2.Text == "" ? "" : "Netočno";
+            }
         }
-
-        private void brisiPolja()
+        private void frmPostavke_Load(object sender, EventArgs e)
         {
-            txtAdmin.Text = txtKorIme.Text = txtLozinka.Text = "";
-            cbAdmin.Checked = false;
-            txtAdmin.Enabled = cbAdmin.Checked;
-            txtKorIme.Focus();
-        }
-
-        private void btnObrisi_Click(object sender, EventArgs e)
-        {
-            // Unos podataka
-            if (noviKorisnik)
-            {
-                brisiPolja();
-                return;
-            }
-            // Izmjena podataka
-            try
-            {
-                txtKorIme.Text = txtKorIme.Tag.ToString();
-                txtLozinka.Text = txtLozinka.Tag.ToString();
-                cbAdmin.Checked = (cbAdmin.Tag.ToString()=="true"?true:false);
-                txtAdmin.Text = (cbAdmin.Tag.ToString() == "true" ? "##########" : "");
-                txtAdmin.Enabled = cbAdmin.Checked;
-            }
-            catch
-            {
-                brisiPolja();
-            }
+            dohvatiPodatke();
         }
 
         private void frmPostavke_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (dosloDoPromjene())
+            try
             {
-                e.Cancel = true;
-                switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
-                {
-                    case DialogResult.Yes:
-                        if (!spremiPromjene()) return;
-                        break;
-                    case DialogResult.No:
-                        e.Cancel=false;
-                        break;
-                }
-            }
-        }
-
-        private void cbAadmin_CheckedChanged(object sender, EventArgs e)
-        {
-            btnProvjeriAdmina.Enabled = txtAdmin.Enabled = cbAdmin.Checked;
-            if (cbAdmin.Checked == true) txtAdmin.Focus();
-                else if (txtKorIme.Text == "") txtKorIme.Focus();
-                    else if (txtLozinka.Text == "") txtLozinka.Focus();
-        }
-
-        private void btnBrisi_Click(object sender, EventArgs e)
-        {
-            if (noviKorisnik)
-            {
-                noviKorisnik = false;
-                promjenaUnosIzmjena();
-                oznaciPrviRed();
-                return;
-            }
-
-            // Brisanje korisnika
-            switch (MessageBox.Show("Jeste li sigurni da želite obrisati označenog korisnika?", "Informacija...", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-            {
-                case DialogResult.Yes:
-                    try
+                if (dosloDoPromjene())
+                    switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
                     {
-                        if (dgvPodaci.Rows.Count > 0)
-                            if(dgvPodaci.DisplayedRowCount(false) > 0)
-                            {
-                                //DataRow redak = new object() as DataRow;
-                                //    redak = Dataset!!!....Tables("xy...Korisni??").Rows.Find(Koriime??)
-                                //if (redak != null)
-                                    //        DS.Tables("xy...Korriid").Rows.Remove(redak)
-                                    //for (int index = 0; index < dgvPodaci.RowCount; index++)
-                                        dgvPodaci.Rows.Remove(dgvPodaci.CurrentRow);
-                                        dgvPodaci.Refresh();
-                                //    if (int.Parse(dgvPodaci.Rows[index].Cells[0].Value.ToString()) == TrenutniID)
-                                    //    {
-                                    //        dgvPodaci.Rows.Remove(dgvPodaci.Rows[index]);
-                                    //        dgvPodaci.Refresh();
-                                    //    }
-                                    //    else
-                                    //    {
-                                    //        MessageBox.Show("Došlo je do greške prilikom pronalaženja reda u bazi!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    //        return;
-                                    //    }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Niste označili niti jedan red!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        oznaciPrviRed();
+                        case DialogResult.Yes:
+                            if (!spremiPromjene()) e.Cancel = true;
+                            break;
+                        case DialogResult.Cancel:
+                            e.Cancel = true;
+                            break;
                     }
-                    catch
-                    {
-                        MessageBox.Show("Došlo je do greške prilikom brisanja podataka!", "Greška...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    break;
             }
-        }
-
-        private void oznaciPrviRed()
-        {
-            if (dgvPodaci.Rows.Count <= 0) // || u DataSetu>0----Or (DS.Tables("xy.....Kor").Rows.Count <= 0)
+            catch (Exception)
             {
-                btnDodaj_Click(null,null);
-            }
-            else
-            {
-                txtFilter.Text = "";
-                dgvPodaci.SelectedRows[0].Selected = true;
-                //dgvPodaci_SelectionChanged(null, null);  testirat bez ovog!!!!!!!!!!!
+                // throw;
             }
         }
 
-        private void promjenaUnosIzmjena()
+        private void txtKorIme_Validating(object sender, CancelEventArgs e)
         {
-            btnDodaj.Enabled = panelKorRacuni.Enabled = !noviKorisnik;
-            if (noviKorisnik)
-            {
-                postaviAutorizaciju(false);
-                btnBrisi.Text = "Odust&ani";
-                return;
-            }
-            btnBrisi.Text = "O&briši";
-
+            provjeriPostojanostKorisnika();
         }
 
-        private void btnDodaj_Click(object sender, EventArgs e)
+        private void txtLozinka2_TextChanged(object sender, EventArgs e)
         {
-            if (dosloDoPromjene())
-            {
-                switch (MessageBox.Show("Želite li pohraniti promjene?", "Informacija...", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question))
-                {
-                    case DialogResult.Yes:
-                        if (!spremiPromjene()) return;
-                        break;
-                    case DialogResult.Cancel:
-                        return;
-                }
-            }
-
-            noviKorisnik = true;
-            brisiPolja();
-            promjenaUnosIzmjena();
-
+            promjeniStatus();
         }
-
-        private void postaviAutorizaciju(bool provjeren)
-        {
-            switch (provjeren)
-            {
-                case true:
-                    cbAdmin.Tag = "true";
-                    txtAdmin.Tag = txtAdmin.Text;
-                    lblStatus.Location = new System.Drawing.Point(140, 92);
-                    lblStatus.ForeColor = System.Drawing.Color.Green;
-                    lblStatus.Text = "Autoriziran";
-                    break;
-                case false:
-                    cbAdmin.Tag = "false";
-                    txtAdmin.Tag = "";
-                    lblStatus.Location = new System.Drawing.Point(135, 92);
-                    lblStatus.ForeColor = System.Drawing.Color.DarkRed;
-                    lblStatus.Text = "Ne autoriziran";
-                    break;
-            }
-        }
-
-        private bool provjeriAdmina()
-        {
-            // Autoriziran korisnik od prije
-            if((cbAdmin.Tag.ToString()=="true"?true:false) && txtAdmin.Text=="##########") return false;
-
-            // Provjera lozinke u bazi
-
-            //!!!!!!!!!!!! petlja
-            // prooba
-            if (txtAdmin.Text == "foi")
-            {
-                postaviAutorizaciju(true);
-                return true;
-            }
-
-
-            // Pogrešan unos
-            switch (MessageBox.Show("Pogrešna lozinka u polju administratora, želite li ponoviti unos?", "Greška...", MessageBoxButtons.YesNo, MessageBoxIcon.Error))
-            {
-                case DialogResult.Yes:
-                    txtAdmin.Text = "";
-                    txtAdmin.Focus();
-                    break;
-                case DialogResult.No:
-                    pocistiPoljeAdmin();
-                    break;
-            }
-
-            return false;
-        }
-
-        private void pocistiPoljeAdmin()
-        {
-            cbAdmin.Checked = false;
-            txtAdmin.Text = "";
-            //try
-            //{
-            //    if (cbAdmin.Tag.ToString() == "true")
-            //    {
-            //        cbAdmin.Checked = true;
-            //        txtAdmin.Text = "##########";
-            //        postaviAutorizaciju(true);
-            //    }
-            //}
-            //catch
-            //{
-            //}
-        }
-
-        private void txtAdmin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            switch (e.KeyChar)
-            {
-                case (char)Keys.Enter:
-                    btnProvjeriAdmin_Click(null,null);
-                    break;
-                case (char)Keys.Escape:
-                    if (lblStatus.Text != "Autoriziran") 
-                        pocistiPoljeAdmin();
-                    break;
-            }
-        }
-
-        private void btnProvjeriAdmin_Click(object sender, EventArgs e)
-        {
-            if (lblStatus.Text == "Autoriziran")
-                MessageBox.Show("Autorizacija već provedena!", "Informacija...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else provjeriAdmina();
-        }
-
-        private void txtAdmin_TextChanged(object sender, EventArgs e)
-        {
-            if (lblStatus.Text == "Autoriziran") postaviAutorizaciju(false);
-        }
-
-        private void btnIspis_Click(object sender, EventArgs e)
-        {
-            // Ispis DataGrida (svih ili pojedinih korisnika korisnika)
-        }
-
 
 
 

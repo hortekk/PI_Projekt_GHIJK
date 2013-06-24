@@ -34,16 +34,32 @@
     <Reference Include="System" />
     <Reference Include="System.Data.SQLite">
       <HintPath>..\Biblioteke\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tablice\Artikli.cs" />
     <Compile Include="Baza.cs" />
-    <Compile Include="Administrator.cs" />
-    <Compile Include="TipPP.cs" />
-    <Compile Include="PoslovniPartner.cs" />
+    <Compile Include="Tablice\Administrator.cs" />
+    <Compile Include="Tablice\KategorijaArtikla.cs" />
+    <Compile Include="Tablice\Otpremnica.cs" />
+    <Compile Include="Pogledi\PregledOtpremnica.cs" />
+    <Compile Include="Pogledi\PregledOtpremnicaStavke.cs" />
+    <Compile Include="Pogledi\PregledPrijamnice.cs" />
+    <Compile Include="Pogledi\PregledPrijamniceStavke.cs" />
+    <Compile Include="Tablice\Prijamnice.cs" />
+    <Compile Include="Tablice\StavkeDokumenta.cs" />
+    <Compile Include="Tablice\TipPP.cs" />
+    <Compile Include="Tablice\PoslovniPartner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Zaposlenik.cs" />
+    <Compile Include="Tablice\Zaposlenik.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Funkcije\Funkcije.csproj">
+      <Project>{0c603a79-b640-49ce-8357-2f109beb2b33}</Project>
+      <Name>Funkcije</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

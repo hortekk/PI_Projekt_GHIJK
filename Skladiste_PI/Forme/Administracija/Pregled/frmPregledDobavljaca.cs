@@ -18,12 +18,24 @@ namespace Skladiste_PI
         }
 
         /// <summary>
+        /// Funkcija onemogućuje određene opcije u slučaju da je lista prazna
+        /// </summary>
+        /// <param name="nemaPodataka">True ako je lista prazna, False ako nije</param>
+        private void PostaviKontrole(bool nemaPodataka = false)
+        {
+            btnIzmjeni.Enabled = btnBrisi.Enabled = dgvDobavljaci.Enabled = !nemaPodataka;
+        }
+
+        /// <summary>
         /// Popunjava DataGrid s dobavljačima iz baze
         /// </summary>
         private void DohvatiDobavljace()
         {
-            List<PoslovniPartner> listaDobavljaca = PoslovniPartner.DohvatiPoslovnePartnere(0); // 0 - Dobavljaci
+            List<PoslovniPartner> listaDobavljaca = PoslovniPartner.DohvatiPoslovnePartnere(TipoviPP.Dobavljac);
             dgvDobavljaci.DataSource = listaDobavljaca;
+
+            if (dgvDobavljaci.RowCount <= 0) PostaviKontrole(true);
+            else PostaviKontrole();
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -36,13 +48,13 @@ namespace Skladiste_PI
             DohvatiDobavljace();
             dgvDobavljaci.Columns["idPP"].Visible = false;
             dgvDobavljaci.Columns["TipPP"].Visible = false;
-            dgvDobavljaci.Columns["ImeNaziv"].HeaderText = "Ime/Naziv";
-            dgvDobavljaci.Columns["PrezimeVrsta"].HeaderText = "Prezime/Vrsta";
+            dgvDobavljaci.Columns["ImeNaziv"].HeaderText = "Ime / Naziv";
+            dgvDobavljaci.Columns["PrezimeVrsta"].HeaderText = "Prezime / Vrsta";
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            frmUnosDobavljaca frmUnosDobavljaca = new frmUnosDobavljaca();
+            frmUnosDobavljaca frmUnosDobavljaca = new frmUnosDobavljaca(null);
             frmUnosDobavljaca.ShowDialog();
             DohvatiDobavljace();
         }

@@ -18,12 +18,24 @@ namespace Skladiste_PI
         }
 
         /// <summary>
+        /// Funkcija onemogućuje određene opcije u slučaju da je lista prazna
+        /// </summary>
+        /// <param name="nemaPodataka">True ako je lista prazna, False ako nije</param>
+        private void PostaviKontrole(bool nemaPodataka=false)
+        {
+            btnIzmjeni.Enabled = btnBrisi.Enabled = dgvZaposlenici.Enabled = !nemaPodataka;
+        }
+
+        /// <summary>
         /// Popunjava DataGrid s zaposlenicima iz baze
         /// </summary>
         private void DohvatiZaposlenike()
         {
             List<Zaposlenik> listaZaposlenika = Zaposlenik.DohvatiZaposlenike();
             dgvZaposlenici.DataSource = listaZaposlenika;
+
+            if (dgvZaposlenici.RowCount <= 0) PostaviKontrole(true);
+            else PostaviKontrole();
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
