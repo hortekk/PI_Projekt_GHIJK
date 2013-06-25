@@ -63,13 +63,13 @@
                   <Width>3.20556cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.09973cm</Width>
+                  <Width>2.80869cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.87042cm</Width>
+                  <Width>3.135cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.87042cm</Width>
+                  <Width>3.95521cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -416,9 +416,9 @@
             </TablixRowHierarchy>
             <DataSetName>dsZaposlenici</DataSetName>
             <Top>0.86995cm</Top>
-            <Left>0.81703cm</Left>
-            <Height>1.46459cm</Height>
-            <Width>14.93417cm</Width>
+            <Left>0.2146cm</Left>
+            <Height>1.46458cm</Height>
+            <Width>15.99252cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -495,7 +495,7 @@ Pavlinska 78
 
 OIB: 12345678912
 tel: 098/9556-755
-email: ghijk@gmail.com</Value>
+email: pi.ghijk@gmail.com</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>

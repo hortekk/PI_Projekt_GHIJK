@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPregledZaposlenika));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPregledDobavljaca));
             this.cmsUredjivanje = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuIzmjeni = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuObrisi = new System.Windows.Forms.ToolStripMenuItem();

@@ -100,7 +100,7 @@
             // txtAdresa
             // 
             this.txtAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtAdresa.Location = new System.Drawing.Point(152, 94);
+            this.txtAdresa.Location = new System.Drawing.Point(160, 94);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(100, 21);
             this.txtAdresa.TabIndex = 7;
@@ -108,7 +108,7 @@
             // txtKontakt
             // 
             this.txtKontakt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtKontakt.Location = new System.Drawing.Point(152, 67);
+            this.txtKontakt.Location = new System.Drawing.Point(160, 67);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(100, 21);
             this.txtKontakt.TabIndex = 6;
@@ -117,16 +117,17 @@
             // 
             this.lblAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAdresa.AutoSize = true;
+            this.lblAdresa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblAdresa.Location = new System.Drawing.Point(55, 97);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(41, 13);
+            this.lblAdresa.Size = new System.Drawing.Size(51, 18);
             this.lblAdresa.TabIndex = 7;
             this.lblAdresa.Text = "Adresa";
             // 
             // txtPrezime
             // 
             this.txtPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtPrezime.Location = new System.Drawing.Point(151, 40);
+            this.txtPrezime.Location = new System.Drawing.Point(159, 40);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(100, 21);
             this.txtPrezime.TabIndex = 5;
@@ -135,16 +136,17 @@
             // 
             this.lblKontakt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblKontakt.AutoSize = true;
+            this.lblKontakt.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblKontakt.Location = new System.Drawing.Point(55, 70);
             this.lblKontakt.Name = "lblKontakt";
-            this.lblKontakt.Size = new System.Drawing.Size(44, 13);
+            this.lblKontakt.Size = new System.Drawing.Size(57, 18);
             this.lblKontakt.TabIndex = 6;
             this.lblKontakt.Text = "Kontakt";
             // 
             // txtIme
             // 
             this.txtIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIme.Location = new System.Drawing.Point(151, 11);
+            this.txtIme.Location = new System.Drawing.Point(159, 11);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(100, 21);
             this.txtIme.TabIndex = 4;
@@ -153,9 +155,10 @@
             // 
             this.lblPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblPrezime.AutoSize = true;
+            this.lblPrezime.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPrezime.Location = new System.Drawing.Point(54, 43);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(79, 13);
+            this.lblPrezime.Size = new System.Drawing.Size(100, 18);
             this.lblPrezime.TabIndex = 5;
             this.lblPrezime.Text = "Prezime / Vrsta";
             // 
@@ -163,9 +166,10 @@
             // 
             this.lblIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblIme.AutoSize = true;
+            this.lblIme.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblIme.Location = new System.Drawing.Point(54, 14);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(61, 13);
+            this.lblIme.Size = new System.Drawing.Size(78, 18);
             this.lblIme.TabIndex = 4;
             this.lblIme.Text = "Ime / Naziv";
             // 
@@ -253,9 +257,10 @@
             // lblTrazi
             // 
             this.lblTrazi.AutoSize = true;
+            this.lblTrazi.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblTrazi.Location = new System.Drawing.Point(3, 3);
             this.lblTrazi.Name = "lblTrazi";
-            this.lblTrazi.Size = new System.Drawing.Size(139, 13);
+            this.lblTrazi.Size = new System.Drawing.Size(175, 18);
             this.lblTrazi.TabIndex = 0;
             this.lblTrazi.Text = "Ime i prezime (naziv i vrsta)";
             // 

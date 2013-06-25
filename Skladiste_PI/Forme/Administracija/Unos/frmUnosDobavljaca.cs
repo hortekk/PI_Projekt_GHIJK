@@ -30,7 +30,7 @@ namespace Skladiste_PI
             dobavljac = odabraniDobavljac;
             samoUnosIzmjena = true;
             postaviSamoUnos();
-            dohvatiKupca();
+            dohvatiDobavljaca();
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)
@@ -125,12 +125,13 @@ namespace Skladiste_PI
             try
             {
                 if ((novi || samoUnosIzmjena) && dobavljac == null && (txtIme.Text != "" || txtPrezime.Text != "")) return true;
-                if (!novi && txtIme.Tag != null && txtPrezime.Tag != null && txtKontakt.Tag != null && txtAdresa.Tag != null)
+                if (!novi && txtIme.Tag != null && txtPrezime.Tag != null && txtKontakt.Tag != null && txtAdresa.Tag != null && txtEmail.Tag !=null)
                 {
                     if (!String.Equals(txtIme.Text.ToString(), txtIme.Tag.ToString())) return true;
                     if (!String.Equals(txtPrezime.Text.ToString(), txtPrezime.Tag.ToString())) return true;
                     if (!String.Equals(txtKontakt.Text.ToString(), txtKontakt.Tag.ToString())) return true;
                     if (!String.Equals(txtAdresa.Text.ToString(), txtAdresa.Tag.ToString())) return true;
+                    if (!String.Equals(txtEmail.Text.ToString(), txtEmail.Tag.ToString())) return true;
                 }
             }
             catch (Exception)
@@ -184,6 +185,7 @@ namespace Skladiste_PI
                 txtKontakt.Tag = dobavljac.Kontakt = txtKontakt.Text;
                 txtAdresa.Tag = dobavljac.Adresa = txtAdresa.Text;
                 dobavljac.TipPP = (int)TipoviPP.Dobavljac;
+                txtEmail.Tag = dobavljac.Email = txtEmail.Text;
 
                 dobavljac.Spremi();
 
@@ -202,9 +204,9 @@ namespace Skladiste_PI
         }
 
         /// <summary>
-        /// Dohvaća podatke iz baze o pojedinom kupcu i puni textBoxe
+        /// Dohvaća podatke iz baze o pojedinom dobavljaču i puni textBoxe
         /// </summary>
-        private void dohvatiKupca()
+        private void dohvatiDobavljaca()
         {
             if (dobavljac != null)
             {
@@ -213,6 +215,7 @@ namespace Skladiste_PI
                 txtPrezime.Tag = txtPrezime.Text = dobavljac.PrezimeVrsta;
                 txtKontakt.Tag = txtKontakt.Text = dobavljac.Kontakt;
                 txtAdresa.Tag = txtAdresa.Text = dobavljac.Adresa;
+                txtEmail.Tag = txtEmail.Text = dobavljac.Email;
             }
         }
 
@@ -248,7 +251,7 @@ namespace Skladiste_PI
                 if (dgvPodaci.Rows.Count > 0 && dgvPodaci.DisplayedRowCount(false) > 0)
                 {
                     dobavljac = PoslovniPartner.DohvatiPoslovnogPartneraPremaID(dgvPodaci.SelectedRows[0].Cells["id"].Value.ToString(),TipoviPP.Dobavljac);
-                    dohvatiKupca();
+                    dohvatiDobavljaca();
                 }
             }
             catch (Exception)
@@ -273,7 +276,7 @@ namespace Skladiste_PI
         /// </summary>
         private void brisiPolja()
         {
-            txtIme.Text = txtPrezime.Text = txtKontakt.Text = txtAdresa.Text = "";
+            txtIme.Text = txtPrezime.Text = txtKontakt.Text = txtAdresa.Text = txtEmail.Text = "";
             txtIme.Focus();
         }
 
@@ -292,6 +295,7 @@ namespace Skladiste_PI
                 txtPrezime.Text = txtPrezime.Tag.ToString();
                 txtKontakt.Text = txtKontakt.Tag.ToString();
                 txtAdresa.Text = txtAdresa.Tag.ToString();
+                txtEmail.Text = txtEmail.Tag.ToString();
             }
             catch
             {

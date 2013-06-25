@@ -129,9 +129,10 @@
             // 
             this.lblAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAdresa.AutoSize = true;
+            this.lblAdresa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblAdresa.Location = new System.Drawing.Point(55, 126);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(41, 13);
+            this.lblAdresa.Size = new System.Drawing.Size(51, 18);
             this.lblAdresa.TabIndex = 8;
             this.lblAdresa.Text = "Adresa";
             // 
@@ -147,9 +148,10 @@
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblEmail.Location = new System.Drawing.Point(55, 70);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(31, 13);
+            this.lblEmail.Size = new System.Drawing.Size(43, 18);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email";
             // 
@@ -157,9 +159,10 @@
             // 
             this.lblBrojTelefona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblBrojTelefona.AutoSize = true;
+            this.lblBrojTelefona.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblBrojTelefona.Location = new System.Drawing.Point(55, 97);
             this.lblBrojTelefona.Name = "lblBrojTelefona";
-            this.lblBrojTelefona.Size = new System.Drawing.Size(69, 13);
+            this.lblBrojTelefona.Size = new System.Drawing.Size(87, 18);
             this.lblBrojTelefona.TabIndex = 7;
             this.lblBrojTelefona.Text = "Broj telefona";
             // 
@@ -175,9 +178,10 @@
             // 
             this.lblPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblPrezime.AutoSize = true;
+            this.lblPrezime.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPrezime.Location = new System.Drawing.Point(54, 43);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(44, 13);
+            this.lblPrezime.Size = new System.Drawing.Size(58, 18);
             this.lblPrezime.TabIndex = 5;
             this.lblPrezime.Text = "Prezime";
             // 
@@ -185,9 +189,10 @@
             // 
             this.lblIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblIme.AutoSize = true;
+            this.lblIme.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblIme.Location = new System.Drawing.Point(54, 14);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(25, 13);
+            this.lblIme.Size = new System.Drawing.Size(32, 18);
             this.lblIme.TabIndex = 4;
             this.lblIme.Text = "Ime";
             // 
@@ -275,9 +280,10 @@
             // lblTrazi
             // 
             this.lblTrazi.AutoSize = true;
+            this.lblTrazi.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblTrazi.Location = new System.Drawing.Point(3, 3);
             this.lblTrazi.Name = "lblTrazi";
-            this.lblTrazi.Size = new System.Drawing.Size(70, 13);
+            this.lblTrazi.Size = new System.Drawing.Size(92, 18);
             this.lblTrazi.TabIndex = 0;
             this.lblTrazi.Text = "Ime i prezime";
             // 

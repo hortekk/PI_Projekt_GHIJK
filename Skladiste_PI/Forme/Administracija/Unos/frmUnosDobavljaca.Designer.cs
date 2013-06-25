@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnosKupaca));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnosDobavljaca));
             this.btnZatvori = new System.Windows.Forms.Button();
             this.panelUnos = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnObrisi = new System.Windows.Forms.Button();
             this.txtAdresa = new System.Windows.Forms.TextBox();
             this.txtKontakt = new System.Windows.Forms.TextBox();
@@ -71,6 +73,8 @@
             // panelUnos
             // 
             this.panelUnos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panelUnos.Controls.Add(this.txtEmail);
+            this.panelUnos.Controls.Add(this.label1);
             this.panelUnos.Controls.Add(this.btnObrisi);
             this.panelUnos.Controls.Add(this.txtAdresa);
             this.panelUnos.Controls.Add(this.txtKontakt);
@@ -86,10 +90,28 @@
             this.panelUnos.Size = new System.Drawing.Size(306, 229);
             this.panelUnos.TabIndex = 4;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(160, 122);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 21);
+            this.txtEmail.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(55, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 18);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Email";
+            // 
             // btnObrisi
             // 
             this.btnObrisi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnObrisi.Location = new System.Drawing.Point(138, 153);
+            this.btnObrisi.Location = new System.Drawing.Point(139, 159);
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(106, 23);
             this.btnObrisi.TabIndex = 10;
@@ -100,7 +122,7 @@
             // txtAdresa
             // 
             this.txtAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtAdresa.Location = new System.Drawing.Point(152, 94);
+            this.txtAdresa.Location = new System.Drawing.Point(160, 94);
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(100, 21);
             this.txtAdresa.TabIndex = 7;
@@ -108,7 +130,7 @@
             // txtKontakt
             // 
             this.txtKontakt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtKontakt.Location = new System.Drawing.Point(152, 67);
+            this.txtKontakt.Location = new System.Drawing.Point(160, 67);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(100, 21);
             this.txtKontakt.TabIndex = 6;
@@ -117,16 +139,17 @@
             // 
             this.lblAdresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblAdresa.AutoSize = true;
+            this.lblAdresa.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblAdresa.Location = new System.Drawing.Point(55, 97);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(41, 13);
+            this.lblAdresa.Size = new System.Drawing.Size(51, 18);
             this.lblAdresa.TabIndex = 7;
             this.lblAdresa.Text = "Adresa";
             // 
             // txtPrezime
             // 
             this.txtPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtPrezime.Location = new System.Drawing.Point(151, 40);
+            this.txtPrezime.Location = new System.Drawing.Point(159, 40);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(100, 21);
             this.txtPrezime.TabIndex = 5;
@@ -135,16 +158,17 @@
             // 
             this.lblKontakt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblKontakt.AutoSize = true;
+            this.lblKontakt.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblKontakt.Location = new System.Drawing.Point(55, 70);
             this.lblKontakt.Name = "lblKontakt";
-            this.lblKontakt.Size = new System.Drawing.Size(44, 13);
+            this.lblKontakt.Size = new System.Drawing.Size(57, 18);
             this.lblKontakt.TabIndex = 6;
             this.lblKontakt.Text = "Kontakt";
             // 
             // txtIme
             // 
             this.txtIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIme.Location = new System.Drawing.Point(151, 11);
+            this.txtIme.Location = new System.Drawing.Point(159, 11);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(100, 21);
             this.txtIme.TabIndex = 4;
@@ -153,9 +177,10 @@
             // 
             this.lblPrezime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblPrezime.AutoSize = true;
+            this.lblPrezime.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPrezime.Location = new System.Drawing.Point(54, 43);
             this.lblPrezime.Name = "lblPrezime";
-            this.lblPrezime.Size = new System.Drawing.Size(79, 13);
+            this.lblPrezime.Size = new System.Drawing.Size(100, 18);
             this.lblPrezime.TabIndex = 5;
             this.lblPrezime.Text = "Prezime / Vrsta";
             // 
@@ -163,16 +188,17 @@
             // 
             this.lblIme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblIme.AutoSize = true;
+            this.lblIme.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblIme.Location = new System.Drawing.Point(54, 14);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(61, 13);
+            this.lblIme.Size = new System.Drawing.Size(78, 18);
             this.lblIme.TabIndex = 4;
             this.lblIme.Text = "Ime / Naziv";
             // 
             // btnSpremi
             // 
             this.btnSpremi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSpremi.Location = new System.Drawing.Point(57, 153);
+            this.btnSpremi.Location = new System.Drawing.Point(58, 159);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnSpremi.TabIndex = 9;
@@ -253,9 +279,10 @@
             // lblTrazi
             // 
             this.lblTrazi.AutoSize = true;
+            this.lblTrazi.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblTrazi.Location = new System.Drawing.Point(3, 3);
             this.lblTrazi.Name = "lblTrazi";
-            this.lblTrazi.Size = new System.Drawing.Size(139, 13);
+            this.lblTrazi.Size = new System.Drawing.Size(175, 18);
             this.lblTrazi.TabIndex = 0;
             this.lblTrazi.Text = "Ime i prezime (naziv i vrsta)";
             // 
@@ -338,5 +365,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImePrezime;
         private System.ComponentModel.BackgroundWorker bwPromjenaUnosa;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label1;
     }
 }

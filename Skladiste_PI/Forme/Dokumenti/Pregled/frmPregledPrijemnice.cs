@@ -26,10 +26,7 @@ namespace Skladiste_PI
         {
             DohvatiPrijamnicu();
 
-            DGVPrijamnice.Columns["idDokumenta"].HeaderText = "ID Dokumenta";
-            DGVPrijamnice.Columns["idOvlasteneOsobe"].Visible = false;
-            DGVPrijamnice.Columns["idPP"].Visible = false;
-            DGVPrijamnice.Columns["TipDokumenta"].Visible = false;
+            DGVPrijamnice.Columns["idDokumenta"].HeaderText = "ID Dokumenta";    
             DGVPrijamnice.Columns["Ime"].HeaderText = "Ime zaposlenika";
             DGVPrijamnice.Columns["Prezime"].HeaderText = "Prezime zaposlenika";
             DGVPrijamnice.Columns["ImeNaziv"].HeaderText = "Ime kupca";

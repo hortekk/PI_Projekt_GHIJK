@@ -10,6 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baza", "Baza\Baza.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funkcije", "Funkcije\Funkcije.csproj", "{0C603A79-B640-49CE-8357-2F109BEB2B33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JedinicnoTestiranje", "JedinicnoTestiranje\JedinicnoTestiranje.csproj", "{6F983642-B096-462F-B533-6D8030130253}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4BC7366F-DC7A-40A8-BF9D-D1B3B1DBB680}"
+	ProjectSection(SolutionItems) = preProject
+		Skladiste_PI\bin\Debug\dokumentacija.pdf = Skladiste_PI\bin\Debug\dokumentacija.pdf
+		Skladiste_PI\bin\Debug\PIBaza.db3 = Skladiste_PI\bin\Debug\PIBaza.db3
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +36,10 @@ Global
 		{0C603A79-B640-49CE-8357-2F109BEB2B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C603A79-B640-49CE-8357-2F109BEB2B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C603A79-B640-49CE-8357-2F109BEB2B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F983642-B096-462F-B533-6D8030130253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F983642-B096-462F-B533-6D8030130253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F983642-B096-462F-B533-6D8030130253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F983642-B096-462F-B533-6D8030130253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

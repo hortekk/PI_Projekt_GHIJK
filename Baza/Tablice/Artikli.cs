@@ -26,7 +26,15 @@ namespace Baza
                 p_idArtikla = int.Parse(dr["idArtikla"].ToString());
                 p_idKategorijeArtikla = int.Parse(dr["idKategorijaArtikla"].ToString());
                 p_Naziv = dr["Naziv"].ToString();
-                p_KolicinaNaSkladistu = int.Parse(dr["KolicinaNaSkladistu"].ToString());
+                //p_KolicinaNaSkladistu = int.Parse(dr["KolicinaNaSkladistu"].ToString());
+                try
+                {
+                    p_KolicinaNaSkladistu = int.Parse(DohvatiKolicinuPrijamnicaPremaID(p_idArtikla.ToString())) - int.Parse(DohvatiKolicinuOtpremnicaPremaID(p_idArtikla.ToString()));
+                }
+                catch (Exception)
+                {
+                    p_KolicinaNaSkladistu = 0;
+                }
                 p_AlarmnaKolicina = int.Parse(dr["AlarmnaKolicina"].ToString());
                 p_CijenaProdaje = int.Parse(dr["CijenaProdaje"].ToString());
 
@@ -125,9 +133,18 @@ namespace Baza
         public int Spremi()
         {
             string sqlUpit = "";
-
-            sqlUpit = "INSERT INTO Artikl (idKategorijaArtikla, Naziv, AlarmnaKolicina,CijenaProdaje) VALUES ('" + idKategorijeArtikla + "','" + Naziv + "', '" + AlarmnaKolicina + "', '" + CijenaProdaje + "' )";
-
+            if (idArtikla == 0)        //Insert
+            {
+                sqlUpit = "INSERT INTO Artikl (idKategorijaArtikla, Naziv, AlarmnaKolicina,CijenaProdaje) VALUES ('" + idKategorijeArtikla + "','" + Naziv + "', '" + AlarmnaKolicina + "', '" + CijenaProdaje + "' )";
+            }
+            else   //Update
+            {
+                sqlUpit = "UPDATE Artikl SET idKategorijaArtikla = '" + idKategorijeArtikla
+                + "', Naziv = '" + Naziv
+                + "', AlarmnaKolicina = '" + AlarmnaKolicina
+                + "', CijenaProdaje = '" + CijenaProdaje
+               + "' WHERE idArtikla = " + idArtikla;
+            }
 
             return Baza.Instance.IzvrsiUpit(sqlUpit);
         }
@@ -155,11 +172,53 @@ namespace Baza
             while (dr.Read())
             {
                 Artikli dokument = new Artikli(dr);
+                //dr["KolicinaNaSkladistu"]="sa";
+
+                //dokument.KolicinaNaSkladistu=
+                //p_KolicinaNaSkladistu = int.Parse(dr["KolicinaNaSkladistu"].ToString());
+                //p_AlarmnaKolicina = int.Parse(dr["AlarmnaKolicina"].ToString());
+                //p_CijenaProdaje = int.Parse(dr["CijenaProdaje"].ToString());
+
+                //dokument.Naziv=dr
                 lista.Add(dokument);
             }
             dr.Close();
             return lista;
         }
+
+        /// <summary>
+        /// Dohvaća zaposlenika iz baze prema ID
+        /// </summary>
+        /// <returns>Zaposlenik</returns>
+        public static Artikli DohvatiArtiklePremaID(string ID)
+        {
+            string sqlUpit = "SELECT Artikl.idArtikla,Artikl.idKategorijaArtikla,Artikl.Naziv,Artikl.AlarmnaKolicina, Artikl.CijenaProdaje, Coalesce(Sum(StavkeDokumenta.Kolicina),0) AS KolicinaNaSkladistu FROM Artikl  LEFT OUTER JOIN  StavkeDokumenta ON StavkeDokumenta.idArti = Artikl.idArtikla Group by 1 HAVING Artikl.idArtikla = " + ID;
+            Artikli a = new Artikli(Baza.Instance.DohvatiDataReader(sqlUpit));
+            return a;
+        }
+
+        /// <summary>
+        /// DohvatiKolicinuOtpremnicaPremaID
+        /// </summary>
+        /// <returns>Zaposlenik</returns>
+        public static string DohvatiKolicinuOtpremnicaPremaID(string ID)
+        {
+            string sqlUpit = "Select Coalesce(Sum(StavkeDokumenta.Kolicina),0) AS KolicinaNaSkladistu  FROM StavkeDokumenta,Dokument,Artikl  where StavkeDokumenta.[idArti] = Artikl.[idArtikla] and Dokument.[TipDokumenta]=2 and StavkeDokumenta.[idDok]=Dokument.[idDokumenta] AND Artikl.[idArtikla] = " + ID;
+            string a = Baza.Instance.DohvatiVrijednost(sqlUpit).ToString();
+            return a;
+        }
+
+        /// <summary>
+        /// DohvatiKolicinuPrijamnicaPremaID
+        /// </summary>
+        /// <returns>Zaposlenik</returns>
+        public static string DohvatiKolicinuPrijamnicaPremaID(string ID)
+        {
+            string sqlUpit = "Select Coalesce(Sum(StavkeDokumenta.Kolicina),0) AS KolicinaNaSkladistu  FROM StavkeDokumenta,Dokument,Artikl  where StavkeDokumenta.[idArti] = Artikl.[idArtikla] and Dokument.[TipDokumenta]=1 and StavkeDokumenta.[idDok]=Dokument.[idDokumenta] AND Artikl.[idArtikla] = " + ID;
+            string a = Baza.Instance.DohvatiVrijednost(sqlUpit).ToString();
+            return a;
+        }
+
 
         ///// <summary>
         ///// Dohvaća sve zaposlenike iz baze i vraća ih u obliku generičke liste
@@ -185,19 +244,40 @@ namespace Baza
         /// <returns>Lista artikala</returns>
         public static List<Artikli> DohvatiSveArtikleAlarm()
         {
+
             List<Artikli> lista = new List<Artikli>();
-            string sqlUpit = "SELECT Artikl.idArtikla,Artikl.idKategorijaArtikla,Artikl.Naziv,Artikl.AlarmnaKolicina, Artikl.CijenaProdaje, Coalesce(Sum(StavkeDokumenta.Kolicina),0) AS KolicinaNaSkladistu FROM Artikl  LEFT OUTER JOIN  StavkeDokumenta ON StavkeDokumenta.idArti = Artikl.idArtikla Group by 1  HAVING KolicinaNaSkladistu < Artikl.AlarmnaKolicina;";
-            DbDataReader dr = Baza.Instance.DohvatiDataReader(sqlUpit);
-            while (dr.Read())
-            {
-                Artikli dokument = new Artikli(dr);
-                lista.Add(dokument);
+            List<Artikli> lA = Artikli.DohvatiSveArtikle();
+            foreach(Artikli a in lA){
+                if (a.KolicinaNaSkladistu < a.AlarmnaKolicina)
+                {
+
+                    lista.Add(a);
+
+                }
+
             }
-            dr.Close();
+
+            //string sqlUpit = "SELECT Artikl.idArtikla,Artikl.idKategorijaArtikla,Artikl.Naziv,Artikl.AlarmnaKolicina, Artikl.CijenaProdaje, Coalesce(Sum(StavkeDokumenta.Kolicina),0) AS KolicinaNaSkladistu FROM Artikl  LEFT OUTER JOIN  StavkeDokumenta ON StavkeDokumenta.idArti = Artikl.idArtikla Group by 1  HAVING KolicinaNaSkladistu < Artikl.AlarmnaKolicina;";
+            //DbDataReader dr = Baza.Instance.DohvatiDataReader(sqlUpit);
+            //while (dr.Read())
+            //{
+            //    Artikli dokument = new Artikli(dr);
+            //    lista.Add(dokument);
+            //}
+            //dr.Close();
             return lista;
         }
 
-    
+        /// <summary>
+        /// Metoda koja nadjačava ToString metodu
+        /// </summary>
+        /// <returns>Ime i prezime zaposlenika</returns>
+        public override string ToString()
+        {
+            return Naziv;
+        }
+
+
     }
     
 }

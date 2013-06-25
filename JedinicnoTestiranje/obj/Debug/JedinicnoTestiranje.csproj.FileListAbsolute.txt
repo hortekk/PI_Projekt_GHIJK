@@ -1,0 +1,72 @@
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Baza.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\FINALv6\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.dll
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\JedinicnoTestiranje.pdb
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Baza.dll
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\System.Data.SQLite.dll
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Baza.pdb
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\bin\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.dll
+C:\Users\Tomislav\Desktop\konacno\JedinicnoTestiranje\obj\Debug\JedinicnoTestiranje.pdb

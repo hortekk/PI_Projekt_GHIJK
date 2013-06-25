@@ -38,7 +38,7 @@ namespace Baza
                 p_ime = dr["Ime"].ToString();
                 p_prezime = dr["Prezime"].ToString();
                 p_imenaziv = dr["ImeNaziv"].ToString();
-               p_prezimevrsta = dr["PrezimeVrsta"].ToString();
+                p_prezimevrsta = dr["PrezimeVrsta"].ToString();
                 p_idDokumenta = int.Parse(dr["idDokumenta"].ToString());
                 p_DatumIzdavanja = dr["DatumIzdavanja"].ToString();
               

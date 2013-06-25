@@ -40,7 +40,7 @@ namespace Skladiste_PI
 
                         Zaposlenik zap = Zaposlenik.DohvatiZaposlenikaPremaID(adm.idZaposlenika.ToString());
 
-                        this.mainForm.PostaviStatusTekst((logiranKorisnik == TipLogin.Korisnik ? "Korisnik: " : "Administrator: ") + zap.ToString() + ", prijavljen " + DateTime.Now.ToString(), logiranKorisnik);
+                        this.mainForm.PostaviStatusTekst(zap.ToString(), logiranKorisnik);
                         break;
                     }
                 }

@@ -15,6 +15,7 @@ namespace Baza
         private string p_Kontakt;
         private string p_Adresa;
         private int p_TipPP;
+        private string p_email;
 
 
         /// <summary>
@@ -39,6 +40,7 @@ namespace Baza
                 p_Kontakt = dr["Kontakt"].ToString();
                 p_Adresa = dr["Adresa"].ToString();
                 p_TipPP = int.Parse(dr["TipPP"].ToString());
+                p_email = dr["Email"].ToString();
             }
 
         }
@@ -73,6 +75,17 @@ namespace Baza
             }
         }
 
+        public string Email
+        {
+            get
+            {
+                return p_email;
+            }
+            set
+            {
+                if (p_email != value) p_email = value;
+            }
+        }
         /// <summary>
         /// Prezime/Vrsta poslovnog partnera
         /// </summary>
@@ -143,7 +156,7 @@ namespace Baza
             string sqlUpit = "";
             if (idPP == 0)        //Insert
             {
-                sqlUpit = "INSERT INTO PoslovniPartner (ImeNaziv, PrezimeVrsta, Kontakt, Adresa, TipPP) VALUES ('" + ImeNaziv + "','" + PrezimeVrsta + "','" + Kontakt + "','" + Adresa + "','" + TipPP + "')";
+                sqlUpit = "INSERT INTO PoslovniPartner (ImeNaziv, PrezimeVrsta, Kontakt, Adresa, TipPP, Email) VALUES ('" + ImeNaziv + "','" + PrezimeVrsta + "','" + Kontakt + "','" + Adresa + "','" + TipPP + "','" + Email + "')";
             }
             else   //Update
             {
@@ -152,6 +165,7 @@ namespace Baza
                 + "', Kontakt = '" + Kontakt
                 + "', Adresa = '" + Adresa
                 + "', TipPP = '" + TipPP
+                + "', Email = '" + Email
                + "' WHERE idPP = " + idPP;
             }
 

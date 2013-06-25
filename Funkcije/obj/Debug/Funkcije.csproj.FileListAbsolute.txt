@@ -3,3 +3,23 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\bin\Debug\Funkcije.pdb
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.dll
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Funkcije\obj\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\bin\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Funkcije\obj\Debug\Funkcije.pdb

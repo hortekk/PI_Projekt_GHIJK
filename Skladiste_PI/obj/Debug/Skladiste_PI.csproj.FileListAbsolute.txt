@@ -28,3 +28,207 @@ D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_P
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
 D:\Tomislav\Documents\GitHub\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\RdlCompile.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK\Skladiste_PI\obj\Debug\RdlCompile.compiled
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.compiled
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Forme.Dokumenti.Generiranje.frmMail.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.pdb
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Forme.Dokumenti.Generiranje.frmMail.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.cache
+C:\Users\Nik\Desktop\last vers\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.compiled
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.pdb
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Forme.Dokumenti.Generiranje.frmMail.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.cache
+D:\FOI\FOI-3.GOD\6.SEM\PI\Projekt\APLIKACIJA\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.compiled
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Baza.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\bin\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.cache
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\RdlCompile.compiled
+C:\Users\Tomislav\Desktop\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL3\PI_Projekt_GHIJK_FINAL\Skladiste_PI\obj\Debug\Skladiste_PI.frmMail.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Skladiste_PI.exe.config
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Skladiste_PI.exe
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Skladiste_PI.pdb
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Baza.dll
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Funkcije.dll
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\System.Data.SQLite.dll
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Baza.pdb
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Funkcije.pdb
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.csprojResolveAssemblyReference.cache
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPostavke.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosArtikla.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmMail.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledPrijamnice.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosPrijamnice.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledZaposlenika.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledKupaca.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosZaposlenika.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosKupaca.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmGeneriraneNarudzbenice.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspis.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmIspisOdabir.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmLogIn.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmGlavna.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledArtikla.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledDobavljaca.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmPregledOtpremince.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosDobavljaca.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.frmUnosOtpremnice.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.Properties.Resources.resources
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.csproj.GenerateResource.Cache
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\RdlCompile.cache
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\RdlCompile.compiled
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Skladiste_PI.exe.manifest
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\bin\Debug\Skladiste_PI.application
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.exe.manifest
+C:\Users\Tomislav\Desktop\konacno\Skladiste_PI\obj\Debug\Skladiste_PI.application

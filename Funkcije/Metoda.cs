@@ -5,6 +5,8 @@ using System.Text;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Funkcije
 {
@@ -28,7 +30,7 @@ namespace Funkcije
         /// <param name="naslov">Naslov mail-a (tema)</param>
         /// <param name="tekst">Tekst koji želimo poslati</param>
         /// <param name="lokacijaPrilog">Lokacija datoteke koju želimo priložiti</param>
-        public void SaljiMail(string sMaila, string passNas, string naMail, string naslov, string tekst, string lokacijaPrilog)
+        public void SaljiMail(string sMaila, string passNas, string naMail, string naslov, string tekst) //string lokacijaPrilog)
         {
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
@@ -37,9 +39,9 @@ namespace Funkcije
             mail.Subject = naslov;
             mail.Body = tekst;
 
-            System.Net.Mail.Attachment attachment;
-            attachment = new System.Net.Mail.Attachment(lokacijaPrilog);
-            mail.Attachments.Add(attachment);
+            //System.Net.Mail.Attachment attachment;
+            //attachment = new System.Net.Mail.Attachment(lokacijaPrilog);
+            //mail.Attachments.Add(attachment);
 
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential(sMaila, passNas);
@@ -61,7 +63,15 @@ namespace Funkcije
             return polje.ToString();
         }
 
-
+        public bool ProvjeriMail(string mail) 
+        {
+            return Regex.IsMatch(mail, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+        }
+        public bool ProvjeriLozinku(string lozinka)
+        {
+            if (lozinka == "ghijk12345") return true;
+            else return false;
+        }
 
 
     }

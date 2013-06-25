@@ -44,7 +44,7 @@ namespace Skladiste_PI
 
         private void DohvatiDobavljace()
         {
-            List<PoslovniPartner> listaDobavljaca = PoslovniPartner.DohvatiPoslovnePartnere(TipoviPP.Dobavljac);
+            List<PoslovniPartner> listaDobavljaca = PoslovniPartner.DohvatiPoslovnePartnere(TipoviPP.Kupac);
             CMKupac.DataSource = listaDobavljaca;
             CMKupac.DisplayMember = "ImeNaziv";
             CMKupac.ValueMember = "idPP";
@@ -83,7 +83,8 @@ namespace Skladiste_PI
 
 
 
-        private void btnUnesiStavku_Click_1(object sender, EventArgs e)
+
+        private void btnUnesiStavku_Click_2(object sender, EventArgs e)
         {
             int number;
             bool result = Int32.TryParse(txtKolicina2.Text.Trim(), out number);
@@ -92,7 +93,14 @@ namespace Skladiste_PI
                 int kol = int.Parse(txtKolicina2.Text);
                 if (kol > 0)
                 {
-                    DGVStavke2.Rows.Add(CBArtikl2.SelectedValue, CBArtikl2.Text, txtKolicina2.Text);
+                    if (CBArtikl2.SelectedValue!=null)
+                    {
+                        DGVStavke2.Rows.Add(CBArtikl2.SelectedValue, CBArtikl2.Text, txtKolicina2.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show(" Nema artikla na skladistu! Prvo unesite artikle: Artikli->Unos artikla ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
@@ -106,39 +114,53 @@ namespace Skladiste_PI
             {
                 MessageBox.Show("Morate unijeti količinu ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
-
-        private void btnUnesiOtpremincu_Click_1(object sender, EventArgs e)
+        private void btnUnesiOtpremincu_Click_2(object sender, EventArgs e)
         {
-
-
             if (DGVStavke2.RowCount > 0)
             {
-                if (otpremnica == null) otpremnica = new Otpremnica();
-
-
-                otpremnica.idOvlasteneOsobe = int.Parse(CMBZaposlenik.SelectedValue.ToString());
-                otpremnica.idPP = int.Parse(CMKupac.SelectedValue.ToString());
-                otpremnica.DatumIzdavanja = dateTimePicker2.Value.ToShortDateString();
-                otpremnica.Spremi();
-                int ID = otpremnica.CurrentID();
-                foreach (DataGridViewRow red in DGVStavke2.Rows)
+                if ((CMKupac.SelectedValue != null) && (CMBZaposlenik.SelectedValue != null))
                 {
-                    stavke = new StavkeDokumenta();
-                    stavke.idDokumenta = ID;
-                    stavke.idArtikla = int.Parse(red.Cells[0].Value.ToString());
-                    stavke.Kolicina = int.Parse(red.Cells[2].Value.ToString());
-                    stavke.Spremi();
-                }
+                    if (otpremnica == null) otpremnica = new Otpremnica();
 
-                this.Close();
+
+                    otpremnica.idOvlasteneOsobe = int.Parse(CMBZaposlenik.SelectedValue.ToString());
+                    otpremnica.idPP = int.Parse(CMKupac.SelectedValue.ToString());
+                    otpremnica.DatumIzdavanja = dateTimePicker2.Value.ToShortDateString();
+                    otpremnica.Spremi();
+                    int ID = otpremnica.CurrentID();
+                    foreach (DataGridViewRow red in DGVStavke2.Rows)
+                    {
+                        stavke = new StavkeDokumenta();
+                        stavke.idDokumenta = ID;
+                        stavke.idArtikla = int.Parse(red.Cells[0].Value.ToString());
+                        stavke.Kolicina = int.Parse(red.Cells[2].Value.ToString());
+                        stavke.Spremi();
+                    }
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Morate unijeti kupca i zaposlenika ! (HINT: Admin-> unos zaposlenika ili unos kupca) ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
                 MessageBox.Show("Morate unijeti barem jednu stavku ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private void btnZatvori_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Baza;
+using Skladiste_PI;
 
 namespace Skladiste_PI
 {
@@ -43,6 +44,13 @@ namespace Skladiste_PI
         private void btnPregled_Click(object sender, EventArgs e)
         {
             mainForm.pokreniFormu(new frmIspis(TipIspis.Narudžbenice));
+        }
+
+        private void btnMail_Click(object sender, EventArgs e)
+        {
+            frmMail mail = new frmMail(mainForm.logiranKorisnik);
+            mail.ShowDialog();
+                
         }
 
     }

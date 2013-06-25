@@ -11,6 +11,7 @@
     <AssemblyName>Skladiste_PI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -20,11 +21,14 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>PI Skladište</ProductName>
+    <PublisherName>Tim GHIJK</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -49,6 +53,18 @@
   <PropertyGroup>
     <ApplicationIcon>Skladiste.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>48ED227F7CB923AFDC790310AC261B05C3D8D252</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Skladiste_PI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -58,7 +74,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forme\Administracija\frmPostavke.cs">
@@ -66,6 +84,18 @@
     </Compile>
     <Compile Include="Forme\Administracija\frmPostavke.Designer.cs">
       <DependentUpon>frmPostavke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmUnosArtikla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Artikli\frmUnosArtikla.Designer.cs">
+      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Generiranje\frmMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Dokumenti\Generiranje\frmMail.Designer.cs">
+      <DependentUpon>frmMail.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.cs">
       <SubType>Form</SubType>
@@ -151,12 +181,6 @@
     <Compile Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.Designer.cs">
       <DependentUpon>frmPregledOtpremince.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Artikli\frmUnosArtikla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forme\Artikli\frmUnosArtikla.Designer.cs">
-      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forme\Administracija\Unos\frmUnosDobavljaca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +198,12 @@
     <EmbeddedResource Include="Forme\Administracija\frmPostavke.resx">
       <DependentUpon>frmPostavke.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Artikli\frmUnosArtikla.resx">
+      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Dokumenti\Generiranje\frmMail.resx">
+      <DependentUpon>frmMail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledPrijemnice.resx">
       <DependentUpon>frmPregledPrijemnice.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,9 +213,9 @@
     <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledZaposlenika.resx">
       <DependentUpon>frmPregledZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Forme\Administracija\Pregled\frmPregledKupaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledKupaca.resx">
       <DependentUpon>frmPregledKupaca.cs</DependentUpon>
-    </None>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Administracija\Unos\frmUnosZaposlenika.resx">
       <DependentUpon>frmUnosZaposlenika.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,18 +240,15 @@
     <EmbeddedResource Include="Forme\Artikli\frmPregledArtikla.resx">
       <DependentUpon>frmPregledArtikla.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Forme\Administracija\Pregled\frmPregledDobavljaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Pregled\frmPregledDobavljaca.resx">
       <DependentUpon>frmPregledDobavljaca.cs</DependentUpon>
-    </None>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Pregled\frmPregledOtpremince.resx">
       <DependentUpon>frmPregledOtpremince.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Artikli\frmUnosArtikla.resx">
-      <DependentUpon>frmUnosArtikla.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Forme\Administracija\Unos\frmUnosDobavljaca.resx">
+    <EmbeddedResource Include="Forme\Administracija\Unos\frmUnosDobavljaca.resx">
       <DependentUpon>frmUnosDobavljaca.cs</DependentUpon>
-    </None>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\Dokumenti\Unos\frmUnosOtpremnice.resx">
       <DependentUpon>frmUnosOtpremnice.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +285,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Skladiste_PI_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -285,6 +313,8 @@
     <None Include="Resources\ispis.ico" />
     <None Include="Resources\unos.ico" />
     <None Include="Resources\preged.ico" />
+    <None Include="Resources\yes.png" />
+    <None Include="Resources\no.png" />
     <Content Include="Skladiste.ico" />
   </ItemGroup>
   <ItemGroup>

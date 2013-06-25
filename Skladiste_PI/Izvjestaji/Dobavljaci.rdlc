@@ -9,13 +9,16 @@
               <Width>2.99609cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.47297cm</Width>
+              <Width>2.96365cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.99609cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.99609cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.90229cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -137,6 +140,38 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Email</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -275,12 +310,43 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Email">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Email.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Email</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -299,9 +365,9 @@
         </TablixRowHierarchy>
         <DataSetName>dsPP</DataSetName>
         <Top>1.08162cm</Top>
-        <Left>2.13995cm</Left>
-        <Height>1.33229cm</Height>
-        <Width>12.46126cm</Width>
+        <Left>0.3937cm</Left>
+        <Height>1.3323cm</Height>
+        <Width>15.85421cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -378,7 +444,7 @@ Pavlinska 78
 
 OIB: 12345678912
 tel: 098/9556-755
-email: ghijk@gmail.com</Value>
+email: pi.ghijk@gmail.com</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -499,6 +565,10 @@ email: ghijk@gmail.com</Value>
         <Field Name="TipPP">
           <DataField>TipPP</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

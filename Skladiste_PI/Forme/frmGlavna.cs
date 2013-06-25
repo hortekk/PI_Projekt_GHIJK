@@ -13,6 +13,8 @@ namespace Skladiste_PI
 
     public partial class frmGlavna : Form
     {
+        public string logiranKorisnik;
+
         public frmGlavna()
         {
             InitializeComponent();
@@ -55,17 +57,19 @@ namespace Skladiste_PI
             {
                 case TipLogin.NijeLogiran: // pricekaj
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.refresh;
-                    break;
+                    this.stStripStatusLabel.Text = tekst;
+                    return;
                 case TipLogin.Korisnik: // logiran korisnik
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.korisnik;
-                    break;
+                   break;
                 case TipLogin.Admin: // logiran admin
                     this.stStripStatusLabel.Image = Skladiste_PI.Properties.Resources.admin;
                     logiranAdmin(true);
                     break;
 
             }
-            this.stStripStatusLabel.Text = tekst;
+            logiranKorisnik = tekst;
+            this.stStripStatusLabel.Text = (tip == TipLogin.Korisnik ? "Korisnik: " : "Administrator: ") + tekst + ", prijavljen " + DateTime.Now.ToString();
 
         }
 

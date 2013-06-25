@@ -85,40 +85,47 @@ namespace Skladiste_PI
 
 
 
-        private void btnDodajStavku_Click(object sender, EventArgs e)
+        
+
+        private void btnDodajStavku_Click_1(object sender, EventArgs e)
         {
             int number;
             bool result = Int32.TryParse(txtKolicina.Text.Trim(), out number);
             if (result)
             {
-                int kol =int.Parse(txtKolicina.Text);
-                if ( kol> 0)
-            {
-                DGVStavke.Rows.Add(CBArtikl.SelectedValue, CBArtikl.Text, txtKolicina.Text);
-            }
-            else { 
-            MessageBox.Show("Morate unijeti količinu veću od 0 ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                
+                int kol = int.Parse(txtKolicina.Text);
+                if (kol > 0)
+                {
+                    if (CBArtikl.SelectedValue!=null)
+                    {
+                        
+                    
+                    DGVStavke.Rows.Add(CBArtikl.SelectedValue, CBArtikl.Text, txtKolicina.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Morate unijeti artikle ! (HINT: Artikli-> unos artikla) ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-        }   
-            
+                else
+                {
+                    MessageBox.Show("Morate unijeti količinu veću od 0 ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+            }
+
             else
             {
                 MessageBox.Show("Morate unijeti količinu ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
-       
-        
-
-        private void btnUnesiPrijamnicu_Click(object sender, EventArgs e)
-
+        private void btnUnesiPrijamnicu_Click_1(object sender, EventArgs e)
         {
-
-            if (DGVStavke.RowCount >0)
+            if (DGVStavke.RowCount > 0)
             {
+                if((CBDobavljac.SelectedValue!=null)&&(CMZaposlenik.SelectedValue!=null)){
                 if (unosprijamnica == null) unosprijamnica = new Prijamnice();
 
 
@@ -138,10 +145,20 @@ namespace Skladiste_PI
 
                 this.Close();
             }
-            else {
+                else
+                {
+                    MessageBox.Show("Morate unijeti kupca i dobavljaca ! (HINT: Admin-> unos zaposlenika ili unos dobavljaca) ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
                 MessageBox.Show("Morate unijeti barem jednu stavku ! ", "UPOZORENJE...", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+        }
+
+        private void btnZatvori_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         
